@@ -4,8 +4,8 @@ import CustomButton from "../button";
 
 const Slider = () => {
   return (
-    <div className="flex h-[600px] ">
-      <div className="relative flex  h-[600px] w-1/2">
+    <div className="flex md:flex-row flex-col  h-[700px] ">
+      <div className="relative flex  h-[700px] w-full md:w-1/2">
         <Image
           fill
           style={{ objectFit: "cover" }}
@@ -13,7 +13,7 @@ const Slider = () => {
           alt="SliderModel"
         />
       </div>
-      <div className="flex justify-center text-left  text-white-900 items-center  gap-7 flex-col w-1/2 bg-pink-500">
+      <div className="flex justify-center text-left pt-6 text-white-900  pb-6 pl-4 md:pl-20 gap-7 flex-col  w-full md:w-1/2 bg-pink-500">
         <div className="flex text-left  flex-col gap-2">
           <span className="text-base">New Arrivals</span>
           <span className="text-5xl ">
@@ -27,10 +27,14 @@ const Slider = () => {
         <div className="">
           <CustomButton
             input="See Collection"
-            size="large"
-            fill={false}
-            arrow="right"
+            size="xlarge"
+            fill={"white"}
+            iconSide="right"
             rounded={false}
+            underline={false}
+            border={false}
+            iconType="arrow"
+
           />
         </div>
       </div>

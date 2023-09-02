@@ -1,7 +1,9 @@
+import CategoryGrid from '@/components/categoryGrid'
 import Header from '@/components/header'
 import ProductCarousel from '@/components/productCarousel'
 import Slider from '@/components/slider'
-import Image from 'next/image'
+import ProductGrid from '@/components/productGrid'
+
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
       <Header />
       <Slider/>
       <ProductCarousel/>
+      <CategoryGrid/>
+      <ProductGrid/>
     </div>
   )
 }
