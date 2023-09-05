@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { SliderModel } from "@/assets/images";
-import CustomButton from "../button";
+import CustomButton from "../layout/button";
 
 const Slider = () => {
   return (
     <div className="flex md:flex-row flex-col  h-[700px] ">
-      <div className="relative flex  h-[700px] w-full md:w-1/2">
+      <div className="relative   h-[700px] w-full md:w-1/2">
         <Image
           fill
           style={{ objectFit: "cover" }}

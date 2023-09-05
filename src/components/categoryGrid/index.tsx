@@ -6,7 +6,7 @@ import {
   categoryAccessories,
 } from "@/assets/images";
 
-import CustomButton from "../button";
+import CustomButton from "../layout/button";
 
 const DUMMY = [
   {
@@ -47,12 +47,12 @@ const CategoryGrid = () => {
               <CustomButton
                 input={item.title}
                 size={"medium"}
-                iconSide={null}
+               
                 fill={'white'}
                 rounded={false}
                 underline={false}
                 border={false}
-                iconType={null}
+               
               />
             </div>
           </div>

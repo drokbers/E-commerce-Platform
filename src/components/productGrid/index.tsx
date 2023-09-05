@@ -1,14 +1,7 @@
-"use client";
+import CustomButton from "../layout/button";
+import ProductItem from "../productCarousel/productGridItem";
 
-import { useEffect, useState } from "react";
-import { iconStar1 } from "@/assets/icons";
-
-import useResizeGrid from "../hooks/useResizeGrid";
-import NavigationDots from "../layout/pagination";
-import ProductItem from "./productGridItem";
-
-
-const ProductCarousel = () => {
+const productGrid = () => {
   const Dummy = [
     {
       id: 1,
@@ -158,38 +151,42 @@ const ProductCarousel = () => {
     },
   ];
 
-  const [itemsToShow, setItemsToShow] = useState([0, 4]);
-  const [currentPage, setCurrentPage] = useState(0);
-  const gridCount = useResizeGrid(4);
-
-  const activeIndexHandler = (index: number) => {
-    setCurrentPage(index);
-  };
-
-  useEffect(() => {
-    const startIndex = gridCount * currentPage;
-    const endIndex = startIndex + gridCount;
-    setItemsToShow([startIndex, endIndex]);
-  }, [gridCount, currentPage]);
-
   return (
-    <div className="flex flex-col w-full  gap-8  p-12">
-      <div className="flex justify-between">
-        <span className="text-4xl font-medium leading-9">Latest Arrivals</span>
-        <NavigationDots
-          items={Dummy}
-          onActiveIndexChange={activeIndexHandler}
-          isArrow={true}
-          gridCount={gridCount}
+    <div className="flex flex-col   items-center gap-12 p-12">
+      <div className="flex  text-2xl font-medium gap-3 items-center justify-center leading-9">
+        <span>You’re browsing</span>
+        <CustomButton
+          input={"Dresses"}
+          size={"textXL"}
+          iconSide={'right'}
+          fill={"transparent"}
+    
+          underline={true}
+         
+          iconType="ChevronDown"
         />
-      </div>
+        <span>In</span>
+        <CustomButton
+          input={"Tag"}
+          size={"textXL"}
+          iconSide={'right'}
+          fill={"transparent"}
+     
+          underline={true}
+      
+          iconType="ChevronDown"
+        />
 
-      <div className="flex justify-center gap-8">
-        {Dummy.slice(itemsToShow[0], itemsToShow[1]).map((item, index) => (
-          <ProductItem key={index} {...item} type="productCarousel" />
-        ))}
       </div>
+      <div className="flex flex-col w-full  gap-4 md:gap-8  ">
+        <div className="grid grid-cols-2 justify-center  xl:grid-cols-4 gap-8">
+          {Dummy.slice(0, 8).map((item) => (
+            <ProductItem key={item.id} {...item} type={"productGrid"} />
+          ))}
+        </div>
+      </div>
+      <CustomButton input={"Load more"} size={"medium"} fill={"black"}/>
     </div>
   );
 };
-export default ProductCarousel;
+export default productGrid;

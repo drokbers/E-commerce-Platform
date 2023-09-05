@@ -6,3 +6,13 @@ export interface Product {
   photo: string;
   new: boolean;
 }
+
+export interface Review {
+  id: number;
+  productName: string;
+  userName: string;
+  userAvatar: string;
+  review: string;
+  rating: number;
+  productID: number;
+}
