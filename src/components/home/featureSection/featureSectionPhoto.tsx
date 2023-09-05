@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import CustomButton from "../layout/button";
+import CustomButton from "../../layout/button";
 
 const FeatureSectionPhoto = () => {
   return (

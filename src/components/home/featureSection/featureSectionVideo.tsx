@@ -1,4 +1,4 @@
-import CustomButton from "../layout/button";
+import CustomButton from "../../layout/button";
 
 const FeatureSectionVideo = () => {
   return (

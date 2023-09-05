@@ -1,4 +1,4 @@
-import CustomButton from "../layout/button";
+import CustomButton from "../../layout/button";
 import ProductItem from "../productCarousel/productGridItem";
 
 const productGrid = () => {

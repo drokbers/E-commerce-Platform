@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-import useResizeGrid from "../hooks/useResizeGrid";
-import NavigationDots from "../layout/pagination";
+import useResizeGrid from "../../../hooks/useResizeGrid";
+import NavigationDots from "../../layout/pagination";
 import ProductItem from "./productGridItem";
 
 
@@ -12,7 +12,7 @@ const ProductCarousel = () => {
     {
       id: 1,
       photo:
-        "https://s3-alpha-sig.figma.com/img/1cfe/4aed/1bcadb35f8105b3448db15c95920b69e?Expires=1694390400&Signature=lD2b0sEdBcHqjQM3mIYTEik393nYig78wVanmCEikBctOP088tVyIiLEhCO0StEMzXAp9z297kH~yr1dNI9l4gr~hMU-tD2NvB-X-evpkdXCv7rmeUrFeWjHr59YfPORZIBCWPh~pqWC4S26U4fygLfp29ioNQa8sxNNG2Q47J8~ejgmN5acgwCCSWdttdK~6dAQ6XBL4q3EdO2t3~5A~7mUdwIkC5D~vMch90ZcBrDKF7UuDdoACEO5q-jk0zpNN3EwZF6qVE3PVkFrKuThj-ukymKbzIAqXCk1isYGWJOktH4OI3NT1SxBfgQRpw2oHVvdQVEEGrN0wKze9Si1qQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "https://i.hizliresim.com/c6f3yt7.",
       title: "Nairo Sweater",
       price: 65.2,
       discount: 20,

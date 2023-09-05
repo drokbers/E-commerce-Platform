@@ -2,7 +2,7 @@
 
 import NavigationDots from "../layout/pagination";
 import TestimonialItem from "./testimonialItem";
-import useResizeGrid from "../hooks/useResizeGrid";
+import useResizeGrid from "../../hooks/useResizeGrid";
 import { useEffect, useState } from "react";
 
 const TestimonialBlock = () => {

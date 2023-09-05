@@ -1,11 +1,11 @@
-import CategoryGrid from '@/components/categoryGrid'
-import Header from '@/components/header'
-import ProductCarousel from '@/components/productCarousel'
-import Slider from '@/components/slider'
-import ProductGrid from '@/components/productGrid'
-import { FeatureSectionVideo, FeatureSectionPhoto } from '@/components/featureSection';
+import CategoryGrid from '@/components/home/categoryGrid'
+import Header from '@/components/layout/header'
+import ProductCarousel from '@/components/carousels/productCarousel'
+import Slider from '@/components/home/slider'
+import ProductGrid from '@/components/carousels/productGrid'
+import { FeatureSectionVideo, FeatureSectionPhoto } from '@/components/home/featureSection';
 
-import TestimonialBlock from '@/components/testimonialBlock'
+import TestimonialBlock from '@/components/testimonial'
 // import Newsletter from '@/components/newsletter'
 
 

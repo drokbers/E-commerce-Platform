@@ -6,7 +6,7 @@ import {
   categoryAccessories,
 } from "@/assets/images";
 
-import CustomButton from "../layout/button";
+import CustomButton from "../../layout/button";
 
 const DUMMY = [
   {
