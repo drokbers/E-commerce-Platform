@@ -6,7 +6,7 @@ import ProductGrid from '@/components/productGrid'
 import { FeatureSectionVideo, FeatureSectionPhoto } from '@/components/featureSection';
 
 import TestimonialBlock from '@/components/testimonialBlock'
-import Newsletter from '@/components/newsletter'
+// import Newsletter from '@/components/newsletter'
 
 
 export default function Home() {

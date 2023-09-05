@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { iconStar1 } from "@/assets/icons";
 
 import useResizeGrid from "../hooks/useResizeGrid";
 import NavigationDots from "../layout/pagination";
