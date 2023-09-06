@@ -4,6 +4,7 @@ import categorySandals from "./categorySandals.png";
 import categoryBelts from "./categoryBelts.png";
 import categoryBags from "./categoryBags.png";
 import categoryAccessories from "./categoryAccessories.png";
+import brandLogo from "./brandlogo.svg";
 
 export {
   Logo,
@@ -12,4 +13,5 @@ export {
   categoryBelts,
   categoryBags,
   categoryAccessories,
+  brandLogo,
 };

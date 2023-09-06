@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
+const withMT = require("@material-tailwind/react/utils/withMT");
 
-const config: Config = {
+
+const config: Config = withMT({
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,12 +22,13 @@ const config: Config = {
         900: "#021A4D",
       },
       black: {
+        50: "#FAFAFB",
         100: "#F5F5F5",
-        200: "#292929",
+        200: "#EAEAEA",
         300: "#343434",
         400: "#A7A7A7",
         500: "#807E7E",
-        600: "#262626",
+        600: "#605F5F",
         700: "#202020",
         800: "#1B1B1B",
         900: "#121212",
@@ -172,5 +175,5 @@ const config: Config = {
     },
   },
   plugins: [],
-};
+});
 export default config;

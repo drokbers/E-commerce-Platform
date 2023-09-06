@@ -13,7 +13,15 @@ interface CustomButtonProps {
   onclick?: () => void;
 }
 
-type ButtonSize = "textL" | "textXL" | "xsmall" | "small" | "medium" | "large" | "xlarge";
+type ButtonSize =
+  | "textM"
+  | "textL"
+  | "textXL"
+  | "xsmall"
+  | "small"
+  | "medium"
+  | "large"
+  | "xlarge";
 
 const CustomButton: React.FC<CustomButtonProps> = ({
   input,
@@ -60,8 +68,18 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     ButtonSize,
     { buttonSize: string; iconSize: number }
   > = {
-    textL: { buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-xl", iconSize: 18 },
-    textXL: { buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-2xl", iconSize: 18 },
+    textM: {
+      buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-base",
+      iconSize: 18,
+    },
+    textL: {
+      buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-xl",
+      iconSize: 18,
+    },
+    textXL: {
+      buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-2xl",
+      iconSize: 18,
+    },
     xsmall: { buttonSize: "w-40 h-10 px-5 py-2 gap-0.5 text-sm", iconSize: 18 },
     small: { buttonSize: "w-44 h-11 px-6 py-2 gap-1 text-base", iconSize: 20 },
     medium: { buttonSize: "w-52 h-12 px-6 py-2.5 gap-1 text-lg", iconSize: 24 },
