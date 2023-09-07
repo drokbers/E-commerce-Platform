@@ -33,7 +33,7 @@ const Dummy = [
 const IconBox = () => {
   return (
     <div className="w-full p-12  ">
-      <div className="grid  grid-cols-2 bg-white-100 pt-6 pb-6 md:grid-cols-4 w-full gap-8  place-self-center place-items-start md:place-items-stretch   divide-x divide-black-200">
+      <div className="grid  grid-cols-2 bg-white-100 pt-6 pb-6 md:grid-cols-4 w-full gap-8  place-self-center place-items-start md:place-items-stretch   md:divide-x divide-black-200">
         {Dummy.map((item) => (
           <div className="flex flex-row justify-center gap-3 ">
             <div className="flex w-11 h-11 justify-center items-center rounded-full bg-black-100">

@@ -6,13 +6,11 @@ import useResizeGrid from "../../../hooks/useResizeGrid";
 import NavigationDots from "../../layout/pagination";
 import ProductItem from "./productGridItem";
 
-
 const ProductCarousel = () => {
   const Dummy = [
     {
       id: 1,
-      photo:
-        "https://i.hizliresim.com/c6f3yt7.",
+      photo: "https://i.hizliresim.com/c6f3yt7.",
       title: "Nairo Sweater",
       price: 65.2,
       discount: 20,
@@ -175,16 +173,23 @@ const ProductCarousel = () => {
     <div className="flex flex-col w-full  gap-8  p-12">
       <div className="flex justify-between">
         <span className="text-4xl font-medium leading-9">Latest Arrivals</span>
-        <NavigationDots
-          items={Dummy}
-          onActiveIndexChange={activeIndexHandler}
-          isArrow={true}
-          gridCount={gridCount}
-        />
+        <div className="hidden md:flex">
+          <NavigationDots
+            items={Dummy}
+            onActiveIndexChange={activeIndexHandler}
+            isArrow={true}
+            gridCount={gridCount}
+          />
+        </div>
       </div>
 
-      <div className="flex justify-center gap-8">
+      <div className="hidden md:flex justify-center  gap-8">
         {Dummy.slice(itemsToShow[0], itemsToShow[1]).map((item, index) => (
+          <ProductItem key={index} {...item} type="productCarousel" />
+        ))}
+      </div>
+      <div className="flex md:hidden  justify-start overflow-auto gap-8">
+        {Dummy.map((item, index) => (
           <ProductItem key={index} {...item} type="productCarousel" />
         ))}
       </div>

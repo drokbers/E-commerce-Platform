@@ -43,7 +43,7 @@ const CategoryGrid = () => {
               objectFit="cover"
               alt={item.title}
             />
-            <div className="absolute left-1/3  bottom-10">
+            <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2  bottom-10">
               <CustomButton
                 input={item.title}
                 size={"medium"}
