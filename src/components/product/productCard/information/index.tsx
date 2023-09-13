@@ -73,11 +73,11 @@ const productInformation = ({ id }: productInformationProps) => {
         </div>
       </div>
 
-      <div id="offer">
+      <div id="offer" className="flex pt-6">
         <span>Offerrr</span>
       </div>
 
-      <div id="select" className="flex flex-col gap-6">
+      <div id="select" className="flex flex-col  pt-6 gap-6">
         <div id="color" className="flex flex-col gap-3">
           <span className="text-xs font-semibold ">Color:</span>
           <div className="flex  gap-3">
@@ -157,7 +157,7 @@ const productInformation = ({ id }: productInformationProps) => {
         </div>
       </div>
 
-      <div id="wishlist" className="flex gap-8 font-medium">
+      <div id="wishlist" className="flex gap-8 pt-6 font-medium">
         <CustomButton
           size={"small"}
           buttonType="text"

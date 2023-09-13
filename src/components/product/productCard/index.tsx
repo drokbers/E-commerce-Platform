@@ -7,7 +7,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ id }: ProductCardProps) => {
   return (
-    <div className="flex  gap-12 p-20 ">
+    <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-20 p-12 ">
       <ProductSlider id={id} />
       <ProductInformation id={id} />
     </div>
