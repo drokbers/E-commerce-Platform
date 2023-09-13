@@ -45,8 +45,9 @@ const CategoryGrid = () => {
             />
             <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2  bottom-10">
               <CustomButton
-                input={item.title}
+                label={item.title}
                 size={"medium"}
+                buttonType="default"
                
                 fill={'white'}
                 rounded={false}

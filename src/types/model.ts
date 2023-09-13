@@ -1,10 +1,17 @@
 export interface Product {
   id: number;
+  photos?: string[];
   title: string;
   price: number;
-  discount: number;
-  photo: string;
-  new: boolean;
+  discount: { discountRate: number; discountDate: string; }[]; 
+  new?: boolean;
+  rating?: number;
+  description?: string;
+  category?: string;
+  colors?: string[];
+  sizes?: string[];
+  stock?: object[];
+  reviews?: Review[];
 }
 
 export interface Review {

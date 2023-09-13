@@ -26,7 +26,8 @@ const Slider = () => {
         </div>
         <div className="">
           <CustomButton
-            input="See Collection"
+            label="See Collection"
+            buttonType="default"
             size="xlarge"
             fill={"white"}
             iconSide="right"

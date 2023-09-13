@@ -115,16 +115,18 @@ const Footer = () => {
         </div>
         <div className="flex gap-2">
           <CustomButton
-            input={"English"}
-            size={"textM"}
+            label={"English"}
+            buttonType="text"
+            size={"medium"}
             iconSide={"right"}
             fill={"transparent"}
             underline={false}
             iconType="ChevronDown"
           />
           <CustomButton
-            input={"USD"}
-            size={"textM"}
+            label={"USD"}
+            buttonType="text"
+            size={"medium"}
             iconSide={"right"}
             fill={"transparent"}
             underline={false}

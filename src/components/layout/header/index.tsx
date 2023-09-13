@@ -7,15 +7,16 @@ import {
   IconUser,
   IconShoppingBag,
   IconChevronDown,
-  IconMenu2
+  IconMenu2,
 } from "@tabler/icons-react";
 
 const Header = () => {
   return (
     <div className="flex  h-16  pl-14  bg-white-100 pt-5 pr-14  items-center justify-between">
-      <div>
-        <Image src={Logo} alt="Logo" />
-      </div>
+      <Link href="/">
+        <Image src={Logo} alt="Logo" />{" "}
+      </Link>
+
       <div className="hidden md:flex  gap-10 ">
         <div className="flex items-center ">
           <Link href="/"> Home </Link>
@@ -40,10 +41,8 @@ const Header = () => {
         <IconShoppingBag color="black" size={28} />
       </div>
       <div className="flex md:hidden gap-4">
-      <IconShoppingBag color="black" size={28} />
+        <IconShoppingBag color="black" size={28} />
         <IconMenu2 color="black" size={28} />
-        
-
       </div>
     </div>
   );

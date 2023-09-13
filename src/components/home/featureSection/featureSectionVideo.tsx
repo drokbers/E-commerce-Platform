@@ -14,8 +14,10 @@ const FeatureSectionVideo = () => {
         </span>
         <div>
           <CustomButton
-            input={"See collection"}
-            size={"textL"}
+            label={"See collection"}
+            size={"large"}
+            buttonType="text"
+           
             fill={"transparent"}
             iconSide={"right"}
             iconType="arrow"

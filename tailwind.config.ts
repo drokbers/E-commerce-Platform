@@ -57,7 +57,7 @@ const config: Config = withMT({
       },
       indigo: {
         100: "#BDA7FF",
-        200: "#AC8BFF",
+        200: "#AF83F8",
         300: "#9B6FFF",
         400: "#8A53FF",
         500: "#6610F2",
@@ -103,7 +103,7 @@ const config: Config = withMT({
         100: "#F8A6AC",
         200: "#F47D87",
         300: "#F15461",
-        400: "#ED2B3C",
+        400: "#E25563",
         500: "#DC3545",
         600: "#C6303F",
         700: "#B02B39",

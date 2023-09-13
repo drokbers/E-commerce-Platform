@@ -84,7 +84,7 @@ const TestimonialBlock = () => {
     <div className="flex flex-col gap-8 w-full  p-12  ">
       <div className="flex justify-between">
         <span className="text-4xl ">Customers Love</span>
-        
+
         <NavigationDots
           items={Dummy}
           onActiveIndexChange={activeIndexHandler}
@@ -109,15 +109,14 @@ const TestimonialBlock = () => {
         ))}
       </div>
       <NavigationDots
-          items={Dummy}
-          onActiveIndexChange={activeIndexHandler}
-          iconFilled={false}
-          isPaginationDots={true}
-          gridCount={gridCount}
-          iconStyle="line"
-          isArrow={false}
-        />
-   
+        items={Dummy}
+        onActiveIndexChange={activeIndexHandler}
+        iconFilled={false}
+        isPaginationDots={true}
+        gridCount={gridCount}
+        iconStyle="line"
+        isArrow={false}
+      />
     </div>
   );
 };
