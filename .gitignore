@@ -7,6 +7,8 @@ node_modules/
 # Automaticallly generated
 out/
 
+
+
 # Environment files
 .env.local
 .env.development.local

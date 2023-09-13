@@ -1,38 +1,38 @@
-import { IconArrowRight, IconChevronDown } from "@tabler/icons-react";
+import { IconArrowRight, IconChevronDown, IconHeart, IconHelpCircle,IconShare} from "@tabler/icons-react";
 import React from "react";
 
 interface CustomButtonProps {
-  input: string;
+  label?: string;
   size: ButtonSize;
+  buttonType?: ButtonType;
   iconSide?: "left" | "right";
-  fill: "black" | "white" | "transparent";
+  fill?: FillType;
   rounded?: boolean;
   underline?: boolean;
   border?: boolean;
-  iconType?: "arrow" | "ChevronDown";
+  iconType?: IconType;
   onclick?: () => void;
+  className?: string;
 }
 
-type ButtonSize =
-  | "textM"
-  | "textL"
-  | "textXL"
-  | "xsmall"
-  | "small"
-  | "medium"
-  | "large"
-  | "xlarge";
+type ButtonSize = "xsmall" | "small" | "medium" | "large" | "xlarge";
+type ButtonType = "default" | "square" | "circle" | "text";
+type FillType = "black" | "white" | "transparent" | "gray";
+type IconType = "arrow" | "ChevronDown" | "heart" | "help" | "share";
+type RoundedType = "rounded" | "rounded-full" | "rounded-3xl";
 
 const CustomButton: React.FC<CustomButtonProps> = ({
-  input,
+  label,
   size,
   iconSide,
+  buttonType = "default",
   fill,
   rounded = false,
   underline = false,
   border = false,
   iconType,
   onclick,
+  className,
 }) => {
   const getBackgroundColor = () => {
     switch (fill) {
@@ -40,6 +40,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         return "bg-black-900 text-white-900";
       case "white":
         return "bg-white-100 text-black-900";
+        case "gray":
+          return "bg-black-100  text-black-900";
       default:
         return "bg-transparent text-black-900";
     }
@@ -51,6 +53,12 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         return IconArrowRight;
       case "ChevronDown":
         return IconChevronDown;
+      case "heart":
+        return IconHeart;
+      case "help":
+        return IconHelpCircle;
+      case "share":
+        return IconShare;
       default:
         return null;
     }
@@ -58,41 +66,49 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 
   const commonStyles = {
     backgroundColor: getBackgroundColor(),
-    isRounded: rounded ? "rounded-3xl" : "rounded-none",
-    border: border ? "border border-black-900" : "border-none",
+    isRounded: rounded ? "rounded-3xl" : "",
+    border: border ? "border border-black-900" : "",
     iconColor: fill === "black" ? "white" : "black",
-    underline: underline ? "underline" : "no-underline",
+    underline: underline ? "underline" : "",
   };
 
-  const sizeStyles: Record<
-    ButtonSize,
-    { buttonSize: string; iconSize: number }
-  > = {
-    textM: {
-      buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-base",
-      iconSize: 18,
+  const sizeStyles = {
+    default: {
+      xsmall: { styles: "w-auto h-10 px-5 py-2 gap-0.5 text-sm", iconSize: 18 },
+      small: { styles: "w-auto h-11  px-6 py-2 gap-1  text-base", iconSize: 22 },
+      medium: { styles: "w-auto h-12 px-6 py-2.5 gap-1  text-lg", iconSize: 26 },
+      large: { styles: "w-auto h-16  px-11 py-5 gap-2 text-xl", iconSize: 30 },
+      xlarge: { styles: "w-auto h-20  px-14 py-5 gap-2 text-2xl", iconSize: 34 },
     },
-    textL: {
-      buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-xl",
-      iconSize: 18,
+    square: {
+      xsmall: { styles: `w-10 h-10  rounded text-sm`, iconSize: 18 },
+      small: { styles: "w-11 h-11 text-base", iconSize: 28 },
+      medium: { styles: "w-18 h-18 text-lg", iconSize: 32 },
+      large: { styles: "w-24 h-24 text-xl", iconSize: 40 },
+      xlarge: { styles: "w-32 h-32 text-2xl", iconSize: 44 },
     },
-    textXL: {
-      buttonSize: "w-auto h-auto px-0 py-0  gap-2 text-2xl",
-      iconSize: 18,
+    circle: {
+      xsmall: { styles: "w-10 h-10 text-sm rounded-full", iconSize: 18 },
+      small: { styles: "w-14 h-14 text-base rounded-full", iconSize: 28 },
+      medium: { styles: "w-18 h-18 text-lg rounded-full", iconSize: 32 },
+      large: { styles: "w-24 h-24 text-xl rounded-full", iconSize: 40 },
+      xlarge: { styles: "w-32 h-32 text-2xl rounded-full", iconSize: 44 },
     },
-    xsmall: { buttonSize: "w-40 h-10 px-5 py-2 gap-0.5 text-sm", iconSize: 18 },
-    small: { buttonSize: "w-44 h-11 px-6 py-2 gap-1 text-base", iconSize: 20 },
-    medium: { buttonSize: "w-52 h-12 px-6 py-2.5 gap-1 text-lg", iconSize: 24 },
-    large: { buttonSize: "w-72 h-16 px-11 py-5 gap-2 text-xl", iconSize: 28 },
-    xlarge: { buttonSize: "w-80 h-20 px-14 py-5 gap-2 text-2xl", iconSize: 32 },
+    text: {
+      xsmall: { styles: "w-auto h-auto gap-0.5 text-xs", iconSize: 18 },
+      small: { styles: " w-auto h-auto gap-1 text-sm", iconSize: 22 },
+      medium: { styles: "w-auto h-auto gap-1 text-base", iconSize: 26 },
+      large: { styles: "w-auto h-auto  gap-2 text-xl", iconSize: 30 },
+      xlarge: { styles: "w-auto h-auto gap-2 text-2xl", iconSize: 34 },
+    },
   };
 
-  const currentSize = sizeStyles[size] || sizeStyles.small;
+  const currentSize = sizeStyles[buttonType][size];
   const IconComponent = getIconComponent();
 
   return (
     <button
-      className={`${currentSize.buttonSize} ${commonStyles.backgroundColor} ${commonStyles.underline} ${commonStyles.isRounded} inline-flex justify-center items-center`}
+      className={` ${className} ${currentSize.styles}  ${commonStyles.border} ${commonStyles.backgroundColor} ${commonStyles.underline} ${commonStyles.isRounded} inline-flex justify-center items-center`}
     >
       {iconSide === "left" && IconComponent && (
         <IconComponent
@@ -100,7 +116,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
           size={currentSize.iconSize}
         />
       )}
-      {input}
+      {label}
       {iconSide === "right" && IconComponent && (
         <IconComponent
           color={commonStyles.iconColor}
