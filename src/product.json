@@ -13,9 +13,11 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
+   
     "category": "Clothing",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat nibh vel mollis varius. Quisque felis elit, aliquam ut velit non, efficitur pharetra sem. Nunc non efficitur nibh. Quisque nec ex dui. Aenean quis ipsum nec metus euismod ultricies sed sit amet tortor. Praesent pharetra ante orci,",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat nibh vel mollis varius. Quisque felis elit, aliquam ut velit non, efficitur pharetra sem. Nunc non efficitur nibh. Quisque nec ex dui. Aenean quis ipsum nec metus euismod ultricies sed sit amet tortor.",
     "stock": [
       {
         "color": "green",
@@ -62,7 +64,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
-        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
+        "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat nibh vel mollis varius. Quisque felis elit, aliquam ut velit non, efficitur pharetra sem. Nunc non efficitur nibh. Quisque nec ex dui. Aenean quis ipsum nec metus euismod ultricies sed sit amet tortor. Praesent pharetra ante orci, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat nibh vel mollis varius. Quisque felis elit, aliquam ut velit non, efficitur pharetra sem. Nunc non efficitur nibh. Quisque nec ex dui. Aenean quis ipsum nec metus euismod ultricies sed sit amet tortor. Praesent pharetra ante orci,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
         "id": 2,
@@ -125,7 +127,8 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 3.5,
     "stock": [
       {
         "color": "green",
@@ -233,7 +236,8 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 4.5,
     "stock": [
       {
         "color": "green",
@@ -341,7 +345,8 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 5.5,
     "stock": [
       {
         "color": "green",
@@ -450,7 +455,8 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 6.5,
     "stock": [
       {
         "color": "green",
@@ -558,7 +564,8 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",
@@ -666,7 +673,8 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 3.5,
     "stock": [
       {
         "color": "green",
@@ -772,7 +780,8 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",
@@ -877,7 +886,8 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",
@@ -982,7 +992,8 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",
@@ -1088,7 +1099,8 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",
@@ -1193,7 +1205,8 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",
@@ -1298,7 +1311,8 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",
@@ -1403,7 +1417,8 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-    "sizes": ["S", "M", "L", "XL"],
+     "sizes": ["S", "M", "L", "XL"],
+    "weight": 1.5,
     "stock": [
       {
         "color": "green",

@@ -8,7 +8,11 @@ import ProductItem from "./productItem";
 
 import ProductData from "@/product.json";
 
-const ProductCarousel = () => {
+interface ProductCarouselProps {
+  title: string;
+}
+
+const ProductCarousel: React.FC<ProductCarouselProps> = ({ title }) => {
   const [itemsToShow, setItemsToShow] = useState([0, 4]);
   const [currentPage, setCurrentPage] = useState(0);
   const gridCount = useResizeGrid(4);
@@ -26,7 +30,7 @@ const ProductCarousel = () => {
   return (
     <div className="flex flex-col w-full  gap-8  p-12">
       <div className="flex justify-between">
-        <span className="text-4xl font-medium leading-9">Latest Arrivals</span>
+        <span className="text-4xl font-medium leading-9">{title}</span>
         <div className="hidden md:flex">
           <NavigationDots
             items={ProductData}

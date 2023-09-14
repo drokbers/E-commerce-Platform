@@ -1,8 +1,9 @@
 import { IconChevronDown } from "@tabler/icons-react";
+import { ReactElement } from "react";
 
 interface CustomAccordionProps {
   title: string;
-  text: string;
+  text: string | ReactElement;
 }
 
 const CustomAccordion: React.FC<CustomAccordionProps> = ({ title, text }) => {

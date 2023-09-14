@@ -3,13 +3,11 @@ import { IconEye } from "@tabler/icons-react";
 
 import CustomButton from "@/components/layout/button";
 import BreadCrumbs from "@/components/layout/breadCrumbs";
-import GetStars from "@/components/testimonial/getStars";
-import { Product } from "@/types/model";
+import GetStars from "@/components/home/testimonial/getStars";
 import ProductData from "@/product.json";
 
 interface productInformationProps {
   id: string;
-
 }
 
 const productInformation = ({ id }: productInformationProps) => {
@@ -18,7 +16,6 @@ const productInformation = ({ id }: productInformationProps) => {
   const breadCrumbsData = ["Home", `${product?.category}`, `${product?.title}`];
 
   const iconColors = (color: string) => {
-    const colors = product?.colors || [];
 
     switch (color) {
       case "green":
@@ -52,7 +49,7 @@ const productInformation = ({ id }: productInformationProps) => {
           </span>
         </div>
         <div className="flex  items-center gap-2">
-          {GetStars(product?.rating)}
+          {GetStars(product?.rating, 20)}
           <span className="text-xs  justify-center font-normal ">
             {product?.["reviews"].length} Reviews
           </span>

@@ -12,6 +12,7 @@ export interface Product {
   sizes?: string[];
   stock?: object[];
   reviews?: Review[];
+  weight?: number;
 }
 
 export interface Review {

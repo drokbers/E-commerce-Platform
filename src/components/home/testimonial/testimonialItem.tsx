@@ -18,7 +18,7 @@ const TestimonialItem = (props: Review) => {
         <div className="flex flex-col justify-center gap-2  ">
           <span className="text-lg text-black-900">{props.userName}</span>
 
-          <div className="flex gap-2 ">{GetStars(props.rating)}</div>
+          <div className="flex gap-2 ">{GetStars(props.rating,16)}</div>
         </div>
       </div>
 
