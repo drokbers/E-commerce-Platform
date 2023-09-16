@@ -3,16 +3,17 @@ export interface Product {
   photos?: string[];
   title: string;
   price: number;
-  discount: { discountRate: number; discountDate: string; }[]; 
+  discount: { discountRate: number; discountDate: string }[];
   new?: boolean;
   rating?: number;
   description?: string;
   category?: string;
   colors?: string[];
   sizes?: string[];
-  stock?: object[];
+  stock?: Stock[];
   reviews?: Review[];
   weight?: number;
+  questions?: Question[];
 }
 
 export interface Review {
@@ -23,4 +24,27 @@ export interface Review {
   review: string;
   rating: number;
   productID: number;
+  date?: string;
+}
+
+export interface Question {
+  id: number;
+  userName: string;
+  question: string;
+  date: string;
+  answers: Answer[];
+}
+
+export interface Answer {
+  id: number;
+  userName: string;
+  date: string;
+  answer: string;
+}
+
+export interface Stock {
+  color: string;
+  sizes: {
+    [key: string]: number;
+  };
 }

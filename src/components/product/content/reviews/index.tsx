@@ -10,10 +10,9 @@ interface ProductReviewsProps {
   reviews: Review[];
 }
 
-console.log();
 const ProductReviews = ({ rating, reviews }: ProductReviewsProps) => {
   return (
-    <div className="flex flex-col gap-5 pt-4 md:pt-8divide-y">
+    <div className="flex flex-col gap-5 pt-4 md:pt-8 divide-y">
       <div className="flex flex-col  gap-5">
         <h4 className="text-2xl md:text-4xl font-medium ">Customer Reviews</h4>
 
@@ -21,8 +20,11 @@ const ProductReviews = ({ rating, reviews }: ProductReviewsProps) => {
           <div className="flex   items-center gap-2 ">
             <div className="flex gap-0.5 ">{GetStars(rating, 16)}</div>
 
-            <span className="text-xs  justify-center font-normal ">
+            <span className="text-base  justify-center font-normal ">
               {reviews.length} Reviews
+              {reviews.length > 0
+                ? `${reviews.length} Reviews`
+                : `There are no reviews yet.`}
             </span>
           </div>
 
@@ -43,6 +45,7 @@ const ProductReviews = ({ rating, reviews }: ProductReviewsProps) => {
             userAvatar={review.userAvatar}
             id={review.id}
             productID={review.productID}
+            date={review.date}
           />
         ))}
       </div>

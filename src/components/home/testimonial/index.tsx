@@ -104,8 +104,7 @@ const TestimonialBlock = () => {
             review={item.review}
             userAvatar={item.userAvatar}
             id={item.id}
-            productID={item.productID}
-          />
+            productID={item.productID}        />
         ))}
       </div>
       <NavigationDots

@@ -13,9 +13,9 @@
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
-   
+
     "category": "Clothing",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat nibh vel mollis varius. Quisque felis elit, aliquam ut velit non, efficitur pharetra sem. Nunc non efficitur nibh. Quisque nec ex dui. Aenean quis ipsum nec metus euismod ultricies sed sit amet tortor.",
     "stock": [
@@ -64,6 +64,8 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat nibh vel mollis varius. Quisque felis elit, aliquam ut velit non, efficitur pharetra sem. Nunc non efficitur nibh. Quisque nec ex dui. Aenean quis ipsum nec metus euismod ultricies sed sit amet tortor. Praesent pharetra ante orci, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat nibh vel mollis varius. Quisque felis elit, aliquam ut velit non, efficitur pharetra sem. Nunc non efficitur nibh. Quisque nec ex dui. Aenean quis ipsum nec metus euismod ultricies sed sit amet tortor. Praesent pharetra ante orci,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -73,6 +75,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -82,6 +85,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -91,6 +95,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -100,6 +105,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -109,7 +115,87 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
+      },      {
+        "id": 3,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
       }
     ]
   },
@@ -127,7 +213,7 @@
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 3.5,
     "stock": [
       {
@@ -175,6 +261,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -184,6 +271,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -193,6 +281,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -202,6 +291,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -211,6 +301,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -220,23 +311,106 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
       }
     ]
   },
   {
     "id": 3,
-    "photos": ["https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Denim Jeans",
     "price": 55.0,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 4.5,
     "stock": [
       {
@@ -284,6 +458,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -293,6 +468,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -302,6 +478,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -311,6 +488,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -320,6 +498,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -329,23 +508,54 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
       }
     ]
   },
   {
     "id": 4,
-    "photos": ["https://s3-alpha-sig.figma.com/img/58ba/e7ee/fd232f80a0a55c100c151db43873de30?Expires=1694390400&Signature=qck9LvbjHBkJ00o5N4x70IulWbuUslDh2lXZjZoK69dl19wUr1TI4~qLfngT8gP0EqYgFVR-gR2I28288UTVacC~ohQfOMJDLFhvrBEJb1FYaY8nkKOa3Ey2GNeyMTPZP6nZKGuErBJIRR-~2aBJOkluPnXtYVlXrYkJGVGdkEy1iWnypdPkqIdG0AgbERk0sQF7REpS9~nTYpriTayD5ZgNOT2GkGu4GEOwVR4dnlnP7lExucG7OMYZNCvn21K9ux01suxZkZx027gfW~9~VenyOI7e02yVUBtP4YBjZA09pgCUBBxq5aXVQ0B5oHkhMm2lHzrrAIFhhQrHC7XvhA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/58ba/e7ee/fd232f80a0a55c100c151db43873de30?Expires=1694390400&Signature=qck9LvbjHBkJ00o5N4x70IulWbuUslDh2lXZjZoK69dl19wUr1TI4~qLfngT8gP0EqYgFVR-gR2I28288UTVacC~ohQfOMJDLFhvrBEJb1FYaY8nkKOa3Ey2GNeyMTPZP6nZKGuErBJIRR-~2aBJOkluPnXtYVlXrYkJGVGdkEy1iWnypdPkqIdG0AgbERk0sQF7REpS9~nTYpriTayD5ZgNOT2GkGu4GEOwVR4dnlnP7lExucG7OMYZNCvn21K9ux01suxZkZx027gfW~9~VenyOI7e02yVUBtP4YBjZA09pgCUBBxq5aXVQ0B5oHkhMm2lHzrrAIFhhQrHC7XvhA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Sporty Jacket",
     "price": 75.8,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 5.5,
     "stock": [
       {
@@ -393,6 +603,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -402,6 +613,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -411,6 +623,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -420,6 +633,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -429,6 +643,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -438,24 +653,26 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
   },
   {
     "id": 5,
-    "photos": ["https://s3-alpha-sig.figma.com/img/0261/2eed/e19ad9fdfae288a228f2006720e7eeb7?Expires=1694390400&Signature=kAilZ6t5AQ5A5s9OxVDyNJsEqdQQxRKls5slXpdda1q4TgTcsnmUSv1z62NPQJLMEuiGKjOap0mL5oDqWacq8Tvl0obV4rm~6z1JbMXndeGGTk~DOtRUPRVPmHc84JiZSHOfE~dvDM92DIyCZURO4YGVOsxwZc85KTTRdw8ZqxST5DDjS-D0EVIvMV~S2lARdBybAcQtWVFdcjmrWGXfkkp73vmCsRFxgyl0T04qzBZHezVLQ1DmKugI-QSq31vvarmKV1OBx8c8e5aRMpGFVinPrQAiIe7POMuC5BMAK0twaaBxq3aSoEVJjiiIOHbypODK31vBYAoqwPeLlmCmxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-  ,
-  "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-  "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/0261/2eed/e19ad9fdfae288a228f2006720e7eeb7?Expires=1694390400&Signature=kAilZ6t5AQ5A5s9OxVDyNJsEqdQQxRKls5slXpdda1q4TgTcsnmUSv1z62NPQJLMEuiGKjOap0mL5oDqWacq8Tvl0obV4rm~6z1JbMXndeGGTk~DOtRUPRVPmHc84JiZSHOfE~dvDM92DIyCZURO4YGVOsxwZc85KTTRdw8ZqxST5DDjS-D0EVIvMV~S2lARdBybAcQtWVFdcjmrWGXfkkp73vmCsRFxgyl0T04qzBZHezVLQ1DmKugI-QSq31vvarmKV1OBx8c8e5aRMpGFVinPrQAiIe7POMuC5BMAK0twaaBxq3aSoEVJjiiIOHbypODK31vBYAoqwPeLlmCmxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "sonraki sayfa",
     "price": 45.5,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 6.5,
     "stock": [
       {
@@ -503,6 +720,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -512,6 +730,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -521,6 +740,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -530,6 +750,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -539,6 +760,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -548,23 +770,54 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "userName": "John D.1",
+        "question": "What type of material is it and what are the wash care instructions (machine washable)?",
+        "date": "10.10.2021",
+        "answers": [
+          {
+            "id": 1,
+            "userName": "Natalie Foster",
+            "date": "10.10.2021",
+            "answer": "Machine wash, cold water. Dry flat. Light weight cotton polyester blend. Looks good and is well made"
+          },
+          {
+            "id": 2,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          },
+          {
+            "id": 3,
+            "userName": "Natalie Foster",
+            "date": "10.11.2021",
+            "answer": " 30 degree will be ok. Dont wash with colors!!!"
+          }
+        ]
       }
     ]
   },
   {
     "id": 6,
-    "photos": ["https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-  ,"https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Denim Jeans",
     "price": 55.0,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -612,6 +865,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -621,6 +875,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -630,6 +885,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -639,6 +895,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -648,6 +905,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -657,23 +915,26 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
   },
   {
     "id": 7,
-    "photos": ["https://s3-alpha-sig.figma.com/img/3edf/11b8/d0bb9a2ea93dfb26a93586a66c687cea?Expires=1694390400&Signature=I9e4V4PKWrl6519y10rcCU3igOGURbHO8Y4k1-MNJ2ST8FmzIBH1FV4w3rRsb~9zp1aQvkXl4vp9lcWtyA-PGi0Cney6jEMMyNBM3TsaHuOCTnf21u0IBhBI6mHqOogs7hwvMMXoJEzRFHUNCpMpE~iBm85qZn9uKBDepdjJpHNWoq7QVzlAVt1WTL9O3GZTguGuO7gLggTL9R1rvnYMhNfFOEGLPgqnJir3sThkC9pqzjad1ToPnx~UZfs7jFIaM~UXvJK2Iyc~FUTF0FCJVicCkoBLbfDY8Vb15jGR0q~Jiy0Ymq2PNdZdQcp7r~-u4HcjjXf86CXDVsw9MH0g1w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/3edf/11b8/d0bb9a2ea93dfb26a93586a66c687cea?Expires=1694390400&Signature=I9e4V4PKWrl6519y10rcCU3igOGURbHO8Y4k1-MNJ2ST8FmzIBH1FV4w3rRsb~9zp1aQvkXl4vp9lcWtyA-PGi0Cney6jEMMyNBM3TsaHuOCTnf21u0IBhBI6mHqOogs7hwvMMXoJEzRFHUNCpMpE~iBm85qZn9uKBDepdjJpHNWoq7QVzlAVt1WTL9O3GZTguGuO7gLggTL9R1rvnYMhNfFOEGLPgqnJir3sThkC9pqzjad1ToPnx~UZfs7jFIaM~UXvJK2Iyc~FUTF0FCJVicCkoBLbfDY8Vb15jGR0q~Jiy0Ymq2PNdZdQcp7r~-u4HcjjXf86CXDVsw9MH0g1w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Nairo Sweater",
     "price": 65.2,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 3.5,
     "stock": [
       {
@@ -721,6 +982,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -730,6 +992,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -739,6 +1002,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -748,6 +1012,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -757,6 +1022,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -766,6 +1032,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
@@ -773,14 +1040,16 @@
 
   {
     "id": 8,
-    "photos": [ "https://s3-alpha-sig.figma.com/img/58ba/e7ee/fd232f80a0a55c100c151db43873de30?Expires=1694390400&Signature=qck9LvbjHBkJ00o5N4x70IulWbuUslDh2lXZjZoK69dl19wUr1TI4~qLfngT8gP0EqYgFVR-gR2I28288UTVacC~ohQfOMJDLFhvrBEJb1FYaY8nkKOa3Ey2GNeyMTPZP6nZKGuErBJIRR-~2aBJOkluPnXtYVlXrYkJGVGdkEy1iWnypdPkqIdG0AgbERk0sQF7REpS9~nTYpriTayD5ZgNOT2GkGu4GEOwVR4dnlnP7lExucG7OMYZNCvn21K9ux01suxZkZx027gfW~9~VenyOI7e02yVUBtP4YBjZA09pgCUBBxq5aXVQ0B5oHkhMm2lHzrrAIFhhQrHC7XvhA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/58ba/e7ee/fd232f80a0a55c100c151db43873de30?Expires=1694390400&Signature=qck9LvbjHBkJ00o5N4x70IulWbuUslDh2lXZjZoK69dl19wUr1TI4~qLfngT8gP0EqYgFVR-gR2I28288UTVacC~ohQfOMJDLFhvrBEJb1FYaY8nkKOa3Ey2GNeyMTPZP6nZKGuErBJIRR-~2aBJOkluPnXtYVlXrYkJGVGdkEy1iWnypdPkqIdG0AgbERk0sQF7REpS9~nTYpriTayD5ZgNOT2GkGu4GEOwVR4dnlnP7lExucG7OMYZNCvn21K9ux01suxZkZx027gfW~9~VenyOI7e02yVUBtP4YBjZA09pgCUBBxq5aXVQ0B5oHkhMm2lHzrrAIFhhQrHC7XvhA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Sporty YYJacket",
     "price": 75.8,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -828,6 +1097,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -837,6 +1107,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -846,6 +1117,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -855,6 +1127,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -864,6 +1137,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -873,20 +1147,23 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
   },
   {
     "id": 9,
-    "photos": ["https://s3-alpha-sig.figma.com/img/2337/4191/3da93acc8a684bacb5b2dcc316cea8d0?Expires=1694390400&Signature=oLvuXTLJZbxyEbivqEMag-~ycEZuffYgKQTbvOZ0MVQmeKgQO0KeRy7AL92t8Z1CwlwIziGueKyqdCh-pzTYN0VDcNB1QdkEZKzxIvMUPB8wIJjCo7SW~M6kMHnRg1fVqFLxtx3gv06vrQXvXzEc8mhwE2sKEAfNXN11L1PnXN5YaeuTymYdQib--RXAqfZa~4uWz71bkjdsrNBj~aT0gigp1BRoPHvwkVQ74IBsFAEqgCJpcoUpQdJT4K45YiEGbqw7I2ZaOCf36Z7cEHS-BOMUVrMeWJo2rrX88RlHUFtryNwC0iO0O-JE~LedEuMyfLxpAgWB5Phy41B9395kaA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/2337/4191/3da93acc8a684bacb5b2dcc316cea8d0?Expires=1694390400&Signature=oLvuXTLJZbxyEbivqEMag-~ycEZuffYgKQTbvOZ0MVQmeKgQO0KeRy7AL92t8Z1CwlwIziGueKyqdCh-pzTYN0VDcNB1QdkEZKzxIvMUPB8wIJjCo7SW~M6kMHnRg1fVqFLxtx3gv06vrQXvXzEc8mhwE2sKEAfNXN11L1PnXN5YaeuTymYdQib--RXAqfZa~4uWz71bkjdsrNBj~aT0gigp1BRoPHvwkVQ74IBsFAEqgCJpcoUpQdJT4K45YiEGbqw7I2ZaOCf36Z7cEHS-BOMUVrMeWJo2rrX88RlHUFtryNwC0iO0O-JE~LedEuMyfLxpAgWB5Phy41B9395kaA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Mavi baska",
     "price": 65.2,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -934,6 +1211,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -943,6 +1221,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -952,6 +1231,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -961,6 +1241,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -970,6 +1251,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -979,20 +1261,23 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
   },
   {
     "id": 10,
-    "photos":[ "https://s3-alpha-sig.figma.com/img/0261/2eed/e19ad9fdfae288a228f2006720e7eeb7?Expires=1694390400&Signature=kAilZ6t5AQ5A5s9OxVDyNJsEqdQQxRKls5slXpdda1q4TgTcsnmUSv1z62NPQJLMEuiGKjOap0mL5oDqWacq8Tvl0obV4rm~6z1JbMXndeGGTk~DOtRUPRVPmHc84JiZSHOfE~dvDM92DIyCZURO4YGVOsxwZc85KTTRdw8ZqxST5DDjS-D0EVIvMV~S2lARdBybAcQtWVFdcjmrWGXfkkp73vmCsRFxgyl0T04qzBZHezVLQ1DmKugI-QSq31vvarmKV1OBx8c8e5aRMpGFVinPrQAiIe7POMuC5BMAK0twaaBxq3aSoEVJjiiIOHbypODK31vBYAoqwPeLlmCmxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/0261/2eed/e19ad9fdfae288a228f2006720e7eeb7?Expires=1694390400&Signature=kAilZ6t5AQ5A5s9OxVDyNJsEqdQQxRKls5slXpdda1q4TgTcsnmUSv1z62NPQJLMEuiGKjOap0mL5oDqWacq8Tvl0obV4rm~6z1JbMXndeGGTk~DOtRUPRVPmHc84JiZSHOfE~dvDM92DIyCZURO4YGVOsxwZc85KTTRdw8ZqxST5DDjS-D0EVIvMV~S2lARdBybAcQtWVFdcjmrWGXfkkp73vmCsRFxgyl0T04qzBZHezVLQ1DmKugI-QSq31vvarmKV1OBx8c8e5aRMpGFVinPrQAiIe7POMuC5BMAK0twaaBxq3aSoEVJjiiIOHbypODK31vBYAoqwPeLlmCmxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Elegant Blouse",
     "price": 45.5,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -1040,6 +1325,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1049,6 +1335,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1058,6 +1345,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1067,6 +1355,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1076,6 +1365,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1085,6 +1375,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
@@ -1092,14 +1383,16 @@
 
   {
     "id": 11,
-    "photos": ["https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/30b7/ed4f/763d05efa7740886736de0bd0d57b5bc?Expires=1694390400&Signature=pySAAkrEmXIbkMQnGw2a61O30x4CX0mSgTXfc0sIK2D081VsRuZF8-RTcTxnPbD1SIIY~Se7~os04pIn-9hXpwUOH4UaUV3utu-fp2DkyafeZCQjrXaB6ibKC3nrViOXOemUNpp4bAnnKubI~YvICkcCTzyiI6Ah~~6ATF1cQ0vsZokN9D6eAxZ6Z3h~UKmKhNcUhwm9tPbKR0xp~yED~DQFm4GWwmpVLe~JzRr-icEoMyHIUEUypyQ17FWFUp12GRijbalgxGu0qNRWRtcXWVywxkKVc7EaYHU47Gm4SHuQvwFlbw0Zj7adkzzPDqqnCXzIMBqJ2AIBhidUzifyzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Zara Jeans",
     "price": 55.0,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -1147,6 +1440,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1156,6 +1450,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1165,6 +1460,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1174,6 +1470,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1183,6 +1480,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1192,20 +1490,23 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
   },
   {
     "id": 12,
-    "photos": [ "https://s3-alpha-sig.figma.com/img/58ba/e7ee/fd232f80a0a55c100c151db43873de30?Expires=1694390400&Signature=qck9LvbjHBkJ00o5N4x70IulWbuUslDh2lXZjZoK69dl19wUr1TI4~qLfngT8gP0EqYgFVR-gR2I28288UTVacC~ohQfOMJDLFhvrBEJb1FYaY8nkKOa3Ey2GNeyMTPZP6nZKGuErBJIRR-~2aBJOkluPnXtYVlXrYkJGVGdkEy1iWnypdPkqIdG0AgbERk0sQF7REpS9~nTYpriTayD5ZgNOT2GkGu4GEOwVR4dnlnP7lExucG7OMYZNCvn21K9ux01suxZkZx027gfW~9~VenyOI7e02yVUBtP4YBjZA09pgCUBBxq5aXVQ0B5oHkhMm2lHzrrAIFhhQrHC7XvhA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/58ba/e7ee/fd232f80a0a55c100c151db43873de30?Expires=1694390400&Signature=qck9LvbjHBkJ00o5N4x70IulWbuUslDh2lXZjZoK69dl19wUr1TI4~qLfngT8gP0EqYgFVR-gR2I28288UTVacC~ohQfOMJDLFhvrBEJb1FYaY8nkKOa3Ey2GNeyMTPZP6nZKGuErBJIRR-~2aBJOkluPnXtYVlXrYkJGVGdkEy1iWnypdPkqIdG0AgbERk0sQF7REpS9~nTYpriTayD5ZgNOT2GkGu4GEOwVR4dnlnP7lExucG7OMYZNCvn21K9ux01suxZkZx027gfW~9~VenyOI7e02yVUBtP4YBjZA09pgCUBBxq5aXVQ0B5oHkhMm2lHzrrAIFhhQrHC7XvhA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Denim Jacket",
     "price": 75.8,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -1253,6 +1554,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1262,6 +1564,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1271,6 +1574,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1280,6 +1584,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1289,6 +1594,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1298,20 +1604,23 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
   },
   {
     "id": 13,
-    "photos": ["https://s3-alpha-sig.figma.com/img/2337/4191/3da93acc8a684bacb5b2dcc316cea8d0?Expires=1694390400&Signature=oLvuXTLJZbxyEbivqEMag-~ycEZuffYgKQTbvOZ0MVQmeKgQO0KeRy7AL92t8Z1CwlwIziGueKyqdCh-pzTYN0VDcNB1QdkEZKzxIvMUPB8wIJjCo7SW~M6kMHnRg1fVqFLxtx3gv06vrQXvXzEc8mhwE2sKEAfNXN11L1PnXN5YaeuTymYdQib--RXAqfZa~4uWz71bkjdsrNBj~aT0gigp1BRoPHvwkVQ74IBsFAEqgCJpcoUpQdJT4K45YiEGbqw7I2ZaOCf36Z7cEHS-BOMUVrMeWJo2rrX88RlHUFtryNwC0iO0O-JE~LedEuMyfLxpAgWB5Phy41B9395kaA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/2337/4191/3da93acc8a684bacb5b2dcc316cea8d0?Expires=1694390400&Signature=oLvuXTLJZbxyEbivqEMag-~ycEZuffYgKQTbvOZ0MVQmeKgQO0KeRy7AL92t8Z1CwlwIziGueKyqdCh-pzTYN0VDcNB1QdkEZKzxIvMUPB8wIJjCo7SW~M6kMHnRg1fVqFLxtx3gv06vrQXvXzEc8mhwE2sKEAfNXN11L1PnXN5YaeuTymYdQib--RXAqfZa~4uWz71bkjdsrNBj~aT0gigp1BRoPHvwkVQ74IBsFAEqgCJpcoUpQdJT4K45YiEGbqw7I2ZaOCf36Z7cEHS-BOMUVrMeWJo2rrX88RlHUFtryNwC0iO0O-JE~LedEuMyfLxpAgWB5Phy41B9395kaA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Nairo Sweater",
     "price": 65.2,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": true,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -1359,6 +1668,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1368,6 +1678,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1377,6 +1688,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1386,6 +1698,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1395,6 +1708,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1404,20 +1718,23 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]
   },
   {
     "id": 14,
-    "photos": [ "https://s3-alpha-sig.figma.com/img/0261/2eed/e19ad9fdfae288a228f2006720e7eeb7?Expires=1694390400&Signature=kAilZ6t5AQ5A5s9OxVDyNJsEqdQQxRKls5slXpdda1q4TgTcsnmUSv1z62NPQJLMEuiGKjOap0mL5oDqWacq8Tvl0obV4rm~6z1JbMXndeGGTk~DOtRUPRVPmHc84JiZSHOfE~dvDM92DIyCZURO4YGVOsxwZc85KTTRdw8ZqxST5DDjS-D0EVIvMV~S2lARdBybAcQtWVFdcjmrWGXfkkp73vmCsRFxgyl0T04qzBZHezVLQ1DmKugI-QSq31vvarmKV1OBx8c8e5aRMpGFVinPrQAiIe7POMuC5BMAK0twaaBxq3aSoEVJjiiIOHbypODK31vBYAoqwPeLlmCmxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"],
+    "photos": [
+      "https://s3-alpha-sig.figma.com/img/0261/2eed/e19ad9fdfae288a228f2006720e7eeb7?Expires=1694390400&Signature=kAilZ6t5AQ5A5s9OxVDyNJsEqdQQxRKls5slXpdda1q4TgTcsnmUSv1z62NPQJLMEuiGKjOap0mL5oDqWacq8Tvl0obV4rm~6z1JbMXndeGGTk~DOtRUPRVPmHc84JiZSHOfE~dvDM92DIyCZURO4YGVOsxwZc85KTTRdw8ZqxST5DDjS-D0EVIvMV~S2lARdBybAcQtWVFdcjmrWGXfkkp73vmCsRFxgyl0T04qzBZHezVLQ1DmKugI-QSq31vvarmKV1OBx8c8e5aRMpGFVinPrQAiIe7POMuC5BMAK0twaaBxq3aSoEVJjiiIOHbypODK31vBYAoqwPeLlmCmxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+    ],
     "title": "Elegant cok baska2Blouse",
     "price": 45.5,
     "discount": [{ "discountRate": 15, "discountDate": "10.10.2023" }],
     "rating": 4,
     "new": false,
     "colors": ["green", "red", "purple", "black"],
-     "sizes": ["S", "M", "L", "XL"],
+    "sizes": ["S", "M", "L", "XL"],
     "weight": 1.5,
     "stock": [
       {
@@ -1465,6 +1782,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1474,6 +1792,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1483,6 +1802,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1492,6 +1812,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       },
       {
@@ -1501,6 +1822,7 @@
         "productID": 123,
         "productName": "Tshirt",
         "userAvatar": "https://i.imgur.com/W6QMUCr.jpeg",
+        "date": "10.10.2021",
         "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non."
       },
       {
@@ -1510,6 +1832,7 @@
         "productID": 124,
         "productName": "Jeans",
         "userAvatar": "https://i.imgur.com/YAhQYLn.jpeg",
+        "date": "10.10.2021",
         "review": "Ut efficitur mauris ac enim eleifend, quis volutpat quam congue."
       }
     ]

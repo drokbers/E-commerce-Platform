@@ -26,7 +26,6 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ title }) => {
     const endIndex = startIndex + gridCount;
     setItemsToShow([startIndex, endIndex]);
   }, [gridCount, currentPage]);
-  console.log(ProductData);
   return (
     <div className="flex flex-col w-full  gap-8  p-12">
       <div className="flex justify-between">

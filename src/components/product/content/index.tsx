@@ -1,11 +1,14 @@
 "use client";
 import { useState } from "react";
-import AdditionalInfo from "./additionalInfo";
-import ProductDescription from "./description";
+
 import ClientOnly from "@/utils/ClientOnly";
 
 import ProductData from "@/product.json";
+import AdditionalInfo from "./additionalInfo";
+import ProductDescription from "./description";
 import ProductReviews from "./reviews";
+
+import ProductQuestions from "./questions";
 import CustomAccordion from "@/components/layout/accordion";
 
 interface ProductContentProps {
@@ -15,8 +18,6 @@ interface ProductContentProps {
 const ProductContent = ({ id }: ProductContentProps) => {
   const [activeTab, setActiveTab] = useState<number | null>(0);
   const product = ProductData.find((item) => item.id === Number(id));
-
-  console.log(product?.reviews);
 
   const tabs = [
     {
@@ -40,7 +41,7 @@ const ProductContent = ({ id }: ProductContentProps) => {
       ),
     },
     {
-      title: `Reviews (${product?.reviews.length})`,
+      title: `Reviews (${product?.reviews.length ?? 0})`,
       content: (
         <ProductReviews
           rating={product?.rating ?? 0}
@@ -49,8 +50,8 @@ const ProductContent = ({ id }: ProductContentProps) => {
       ),
     },
     {
-      title: "Questions",
-      content: <></>,
+      title: `Questions (${product?.questions?.length ?? 0})`,
+      content: <ProductQuestions questions={product?.questions ?? []} />,
     },
   ];
 

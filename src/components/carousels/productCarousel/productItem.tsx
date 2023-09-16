@@ -22,7 +22,6 @@ const ProductItem = (props: ProductItemProps) => {
     },
   };
 
-  console.log(props);
   return (
     <Link href={`/product/${props.id}`}>
       <div className="flex flex-col items-center  text-black-900 gap-2">
