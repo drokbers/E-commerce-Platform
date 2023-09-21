@@ -8,7 +8,7 @@ interface ProductQuestionsProps {
 }
 
 const ProductQuestions = ({ questions }: ProductQuestionsProps) => {
-  console.log(questions, "questions");
+
   return (
     <div className="flex flex-col gap-5 pt-4 md:pt-8 divide-y">
       <div className="flex flex-col  gap-5">

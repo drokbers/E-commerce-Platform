@@ -6,17 +6,20 @@ interface BreadCrumbsProps {
 }
 
 const BreadCrumbs = ({ items }: BreadCrumbsProps) => {
+  const allItems = ["Home", ...items];
+
   return (
     <div className="flex gap-3 text-black-600 text-xs font-normal">
-      {items.map((item, index) => (
+      {allItems.map((item, index) => (
         <span key={index}>
-          
-          {index === items.length - 1 ? (
+          {index === allItems.length - 1 ? (
             item
           ) : (
-            <Link className="" href={`/${item.toLowerCase()}`}>{item} </Link>
+            <Link href={item === "Home" ? "/" : `/${item.toLowerCase()}`}>
+              {item}{" "}
+            </Link>
           )}
-          {index < items.length-1  && " > "}
+          {index < allItems.length - 1 && " > "}
         </span>
       ))}
     </div>

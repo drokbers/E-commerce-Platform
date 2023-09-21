@@ -3,7 +3,7 @@ import { IconEye } from "@tabler/icons-react";
 
 import CustomButton from "@/components/layout/button";
 import BreadCrumbs from "@/components/layout/breadCrumbs";
-import GetStars from "@/components/home/testimonial/getStars";
+import GetStars from "@/utils/getStars";
 import ProductData from "@/product.json";
 
 interface productInformationProps {
@@ -13,7 +13,7 @@ interface productInformationProps {
 const productInformation = ({ id }: productInformationProps) => {
   const product = ProductData.find((item) => item.id === Number(id));
 
-  const breadCrumbsData = ["Home", `${product?.category}`, `${product?.title}`];
+  const breadCrumbsData = [`${product?.category}`, `${product?.title}`];
 
   const iconColors = (color: string) => {
 

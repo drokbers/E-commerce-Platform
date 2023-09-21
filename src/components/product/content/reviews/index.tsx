@@ -1,7 +1,7 @@
 import ReviewsItem from "./reviewsItem";
 
 import CustomButton from "@/components/layout/button";
-import GetStars from "@/components/home/testimonial/getStars";
+import GetStars from "@/utils/getStars";
 
 import { Review } from "@/types/model";
 

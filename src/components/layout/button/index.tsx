@@ -1,4 +1,11 @@
-import { IconArrowRight, IconChevronDown, IconHeart, IconHelpCircle,IconShare} from "@tabler/icons-react";
+import {
+  IconArrowRight,
+  IconChevronDown,
+  IconHeart,
+  IconAdjustmentsHorizontal,
+  IconHelpCircle,
+  IconShare,
+} from "@tabler/icons-react";
 import React from "react";
 
 interface CustomButtonProps {
@@ -18,7 +25,13 @@ interface CustomButtonProps {
 type ButtonSize = "xsmall" | "small" | "medium" | "large" | "xlarge";
 type ButtonType = "default" | "square" | "circle" | "text";
 type FillType = "black" | "white" | "transparent" | "gray";
-type IconType = "arrow" | "ChevronDown" | "heart" | "help" | "share";
+type IconType =
+  | "arrow"
+  | "ChevronDown"
+  | "heart"
+  | "help"
+  | "share"
+  | "settings";
 type RoundedType = "rounded" | "rounded-full" | "rounded-3xl";
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -40,8 +53,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         return "bg-black-900 text-white-900";
       case "white":
         return "bg-white-100 text-black-900";
-        case "gray":
-          return "bg-black-100  text-black-900";
+      case "gray":
+        return "bg-black-100  text-black-900";
       default:
         return "bg-transparent text-black-900";
     }
@@ -59,6 +72,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         return IconHelpCircle;
       case "share":
         return IconShare;
+      case "settings":
+        return IconAdjustmentsHorizontal;
       default:
         return null;
     }
@@ -75,10 +90,19 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const sizeStyles = {
     default: {
       xsmall: { styles: "w-auto h-10 px-5 py-2 gap-0.5 text-sm", iconSize: 18 },
-      small: { styles: "w-auto h-11  px-6 py-2 gap-1  text-base", iconSize: 22 },
-      medium: { styles: "w-auto h-12 px-6 py-2.5 gap-1  text-lg", iconSize: 26 },
+      small: {
+        styles: "w-auto h-11  px-6 py-2 gap-1  text-base",
+        iconSize: 22,
+      },
+      medium: {
+        styles: "w-auto h-12 px-6 py-2.5 gap-1  text-lg",
+        iconSize: 26,
+      },
       large: { styles: "w-auto h-16  px-11 py-5 gap-2 text-xl", iconSize: 30 },
-      xlarge: { styles: "w-auto h-20  px-14 py-5 gap-2 text-2xl", iconSize: 34 },
+      xlarge: {
+        styles: "w-auto h-20  px-14 py-5 gap-2 text-2xl",
+        iconSize: 34,
+      },
     },
     square: {
       xsmall: { styles: `w-10 h-10  rounded text-sm`, iconSize: 18 },

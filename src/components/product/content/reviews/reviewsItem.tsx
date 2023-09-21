@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import GetStars from "@/components/home/testimonial/getStars";
+import GetStars from "@/utils/getStars";
 import { Review } from "@/types/model";
 
 const ReviewsItem = (props: Review) => {

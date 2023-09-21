@@ -5,6 +5,8 @@ import categoryBelts from "./categoryBelts.png";
 import categoryBags from "./categoryBags.png";
 import categoryAccessories from "./categoryAccessories.png";
 import brandLogo from "./brandlogo.svg";
+import shopBannerBG from "./shopBannerBG.png";
+import placeHolder from "./placeHolder.jpg";
 
 export {
   Logo,
@@ -14,4 +16,6 @@ export {
   categoryBags,
   categoryAccessories,
   brandLogo,
+  placeHolder,
+  shopBannerBG,
 };
