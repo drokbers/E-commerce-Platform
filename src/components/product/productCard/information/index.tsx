@@ -4,6 +4,7 @@ import { IconEye } from "@tabler/icons-react";
 import CustomButton from "@/components/layout/button";
 import BreadCrumbs from "@/components/layout/breadCrumbs";
 import GetStars from "@/utils/getStars";
+import WishlistComponent from "@/components/layout/wishlist";
 import ProductData from "@/product.json";
 
 interface productInformationProps {
@@ -154,29 +155,7 @@ const productInformation = ({ id }: productInformationProps) => {
         </div>
       </div>
 
-      <div id="wishlist" className="flex gap-8 pt-6 font-medium">
-        <CustomButton
-          size={"small"}
-          buttonType="text"
-          label="Wishlist"
-          iconSide="left"
-          iconType="heart"
-        />
-        <CustomButton
-          size={"small"}
-          buttonType="text"
-          label="Ask question"
-          iconSide="left"
-          iconType="heart"
-        />
-        <CustomButton
-          size={"small"}
-          buttonType="text"
-          label="Share"
-          iconSide="left"
-          iconType="heart"
-        />
-      </div>
+     <WishlistComponent/>
     </div>
   );
 };

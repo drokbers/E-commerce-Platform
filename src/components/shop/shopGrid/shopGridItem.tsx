@@ -22,17 +22,17 @@ const ShopItem = (props: ShopItemProps) => {
       case 3:
         return "w-[29.5vw] h-[39.2vw]";
       case 2:
-        return "w-[45.5vw] h-[62vw]";
+        return " w-[41.0vw] h-[58.5vw] lg:w-[43.5vw] lg:h-[61vw]";
+
       default:
         return "w-[21.5vw] h-[28.5vw]";
     }
   };
-  //16 5li
+
   return (
     <Link href={`/product/${props.id}`}>
       <div className="flex flex-col    text-black-900 gap-3">
         <div className={`relative ${getStyle()} `}>
-          {/* 16 - 21.5 - 29.5 vw tasarimla ayni */}
           <Image src={props.photo} fill layout="fill" alt="SliderModel" />
         </div>
         <div className="flex flex-col gap-1">

@@ -11,7 +11,7 @@ const config: Config = withMT({
   theme: {
     colors: {
       blue: {
-        100: "#A5C9FF",
+        100: "#3E3E59",
         200: "#7FA2FF",
         300: "#597CFF",
         400: "#3255FF",

@@ -1,4 +1,5 @@
-import ShopItem from "./ShopItem";
+import ShopItem from "./shopGridItem";
+import ShopListItem from "./shopListItem";
 
 import { Product } from "@/types/model";
 
@@ -6,29 +7,22 @@ type ProductShopGridProps = {
   products: Array<
     Pick<Product, "id" | "title" | "price" | "discount" | "new" | "rating"> & {
       photo: string;
-     
     }
-  
   >;
   gridCount: number;
 };
 
-const ProductShopGrid = ({ products, gridCount }: ProductShopGridProps) => {
-
-  const gridClasses = `gap-8 flex flex-wrap justify-between`;
+const ProductShopGrid: React.FC<ProductShopGridProps> = ({ products, gridCount }) => {
+  const isListView = gridCount === 1;
+  const ComponentToRender = isListView ? ShopListItem : ShopItem;
+  const gridClasses = `gap-8 flex ${ !isListView ? "flex-wrap" : "flex-col" } justify-center`;
 
   return (
-    <div id="gird" className= {gridClasses}>
+    <div id="grid" className={gridClasses}>
       {products.map((product) => (
-        <ShopItem
+        <ComponentToRender
           key={product.id}
-          id={product.id}
-          photo={product.photo}
-          title={product.title}
-          price={product.price}
-          discount={product.discount}
-          new={product.new}
-          rating={product.rating}
+          {...product}
           gridCount={gridCount}
         />
       ))}

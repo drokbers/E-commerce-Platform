@@ -1,6 +1,10 @@
+
+
+
 import { IconX } from "@tabler/icons-react";
 import CustomButton from "@/components/layout/button";
 import CustomRange from "./customRange";
+
 
 const DummyCategory = [
   {
@@ -97,12 +101,20 @@ const iconColors = (color: string) => {
   }
 };
 
-const LeftBarFilters = () => {
+type LeftBarFiltersProps = {
+  setCloseFilter: (value: boolean) => void;
+};
+
+const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
+
+
+
+  
   return (
-    <div className="flex flex-col   p-6 gap-8">
+    <div className="hidden md:flex flex-col   p-6 gap-8">
       <div className="flex justify-between">
         <span className="text-xl font-semibold ">Filter</span>
-        <button>
+        <button onClick={() => setCloseFilter(false)}>
           <IconX size={24} />
         </button>
       </div>

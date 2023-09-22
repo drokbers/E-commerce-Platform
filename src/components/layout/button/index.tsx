@@ -131,7 +131,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const IconComponent = getIconComponent();
 
   return (
-    <button
+    <button onClick={onclick}
       className={` ${className} ${currentSize.styles}  ${commonStyles.border} ${commonStyles.backgroundColor} ${commonStyles.underline} ${commonStyles.isRounded} inline-flex justify-center items-center`}
     >
       {iconSide === "left" && IconComponent && (
