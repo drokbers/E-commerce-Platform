@@ -1,19 +1,23 @@
 "use client";
 
 import { IconTruck } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
 
 const CartGoal = () => {
+  const [carttotal, setCartTotal] = useState<number>(0);
 
-  const cartData = localStorage.getItem("cart");
-  const cart = cartData ? JSON.parse(cartData) : [];
-  const calculateTotal = () => {
+
+
+
+  useEffect(() => {
+    const cartData = localStorage.getItem("cart");
+    const cart = cartData ? JSON.parse(cartData) : [];
     let total = 0;
     cart.map((item: { price: number; quantity: number }) => {
       total += item.price * item.quantity;
     });
-    return total;
-  };
-  const carttotal = calculateTotal();
+    setCartTotal(total);
+  }, []);
 
   const RANGES = {
     FREE_SHIPPING: 100,

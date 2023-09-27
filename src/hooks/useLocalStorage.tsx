@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 
 function useLocalStorage<T>(
@@ -30,7 +31,7 @@ function useLocalStorage<T>(
   useEffect(() => {
     const handleStorageChange = (e: StorageEvent) => {
       if (e.key === key && e.newValue !== JSON.stringify(storedValue)) {
-        setStoredValue(getStoredValue()); // Get updated value
+        setStoredValue(getStoredValue()); 
       }
     };
 

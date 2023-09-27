@@ -38,10 +38,10 @@ const Header = () => {
       <div className="hidden md:flex gap-5">
         <IconSearch color="black" size={28} />
         <IconUser color="black" size={28} />
-        <IconShoppingBag color="black" size={28} />
+        <Link href="/cart"> <IconShoppingBag color="black" size={28} /></Link>
       </div>
       <div className="flex md:hidden gap-4">
-        <IconShoppingBag color="black" size={28} />
+      <Link href="/cart"> <IconShoppingBag color="black" size={28} /></Link>
         <IconMenu2 color="black" size={28} />
       </div>
     </div>
