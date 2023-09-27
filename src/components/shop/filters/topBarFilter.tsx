@@ -75,7 +75,7 @@ const TopBarFilter: React.FC<TopBarFilterProps> = ({
             size="small"
             buttonType="text"
             className="w-4"
-            onclick={toggleLeftFilter}
+            onClick={toggleLeftFilter}
           />
 
           <CustomButton
@@ -122,7 +122,7 @@ const TopBarFilter: React.FC<TopBarFilterProps> = ({
             buttonType="text"
             size="medium"
             className="w-4"
-            onclick={toggleLeftFilter}
+            onClick={toggleLeftFilter}
           />
           <div className="flex items-center">
             {gridData.slice(3, 5).map((grid) => (

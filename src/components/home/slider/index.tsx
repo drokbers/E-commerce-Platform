@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SliderModel } from "@/assets/images";
 import CustomButton from "../../layout/button";
+import Link from "next/link";
 
 const Slider = () => {
   return (
@@ -25,6 +26,8 @@ const Slider = () => {
           </span>
         </div>
         <div className="">
+        <Link href="/shop">
+          
           <CustomButton
             label="See Collection"
             buttonType="default"
@@ -35,8 +38,8 @@ const Slider = () => {
             underline={false}
             border={false}
             iconType="arrow"
-
           />
+          </Link>
         </div>
       </div>
     </div>

@@ -6,18 +6,26 @@ import BreadCrumbs from "@/components/layout/breadCrumbs";
 import GetStars from "@/utils/getStars";
 import WishlistComponent from "@/components/layout/wishlist";
 import ProductData from "@/product.json";
+import { useState } from "react";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
-interface productInformationProps {
+import { CartItem } from "@/types/model";
+
+interface ProductInfoProps {
   id: string;
 }
+type QuantityAction = "add" | "subtract";
 
-const productInformation = ({ id }: productInformationProps) => {
+const productInformation = ({ id }: ProductInfoProps) => {
+  const [selectedColor, setSelectedColor] = useState<string>("");
+  const [selectedSize, setSelectedSize] = useState<string>("");
+  const [selectedQuantity, setSelectedQuantity] = useState<number>(1);
+  const [cart, setCart] = useLocalStorage<CartItem[]>("cart", []);
+
   const product = ProductData.find((item) => item.id === Number(id));
-
   const breadCrumbsData = [`${product?.category}`, `${product?.title}`];
 
   const iconColors = (color: string) => {
-
     switch (color) {
       case "green":
         return " bg-teal-500";
@@ -32,9 +40,52 @@ const productInformation = ({ id }: productInformationProps) => {
     }
   };
 
-  const sizeActiveHandler = (size: string) => {
-    const borderColor = "border-black-900";
-    const border = "border-2";
+  const quantityHandler = (action: QuantityAction) => {
+    setSelectedQuantity((prevQuantity) => {
+      if (action === "add") return prevQuantity + 1;
+      if (prevQuantity > 0 && action === "subtract") return prevQuantity - 1;
+      return prevQuantity;
+    });
+  };
+
+  const isSameItem = (item1: CartItem, item2: CartItem) =>
+    item1.id === item2.id &&
+    item1.color === item2.color &&
+    item1.size === item2.size;
+
+  const addToCart = () => {
+    if (!product) return;
+
+    if (!selectedColor || !selectedSize) {
+      alert("Please select a color and size");
+      return;
+    }
+
+    const cartItem: CartItem = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      quantity: selectedQuantity,
+      color: selectedColor,
+      size: selectedSize,
+      image: product.photos[0],
+    };
+
+    const itemIndex = cart.findIndex((item) => isSameItem(item, cartItem));
+
+    const updatedCart =
+      itemIndex !== -1
+        ? [
+            ...cart.slice(0, itemIndex),
+            {
+              ...cart[itemIndex],
+              quantity: cart[itemIndex].quantity + selectedQuantity,
+            },
+            ...cart.slice(itemIndex + 1),
+          ]
+        : [...cart, cartItem];
+
+    setCart(updatedCart);
   };
 
   return (
@@ -58,7 +109,6 @@ const productInformation = ({ id }: productInformationProps) => {
         <div className="flex gap-3 items-center ">
           <span className="text-2xl font-semibold "> ${product?.price}</span>
           <span className="text-base font-normal  text-black-400 line-through ">
-            {" "}
             ${product?.discount[0].discountRate}
           </span>
         </div>
@@ -72,20 +122,25 @@ const productInformation = ({ id }: productInformationProps) => {
       </div>
 
       <div id="offer" className="flex pt-6">
-        <span>Offerrr</span>
+        <span>Offer area to be added later</span>
       </div>
 
       <div id="select" className="flex flex-col  pt-6 gap-6">
         <div id="color" className="flex flex-col gap-3">
           <span className="text-xs font-semibold ">Color:</span>
-          <div className="flex  gap-3">
+          <div className="flex  gap-3 ">
             {product?.colors.map((color) => (
               <CustomButton
                 key={color}
                 size={"xsmall"}
                 buttonType="circle"
-                className={` ${iconColors(color)}`}
+                className={` ${iconColors(color)}  ${
+                  selectedColor === color &&
+                  "ring-black-500 ring-offset-2 ring-1"
+                } 
+                `}
                 fill={"black"}
+                onClick={() => setSelectedColor(color)}
               />
             ))}
           </div>
@@ -93,7 +148,7 @@ const productInformation = ({ id }: productInformationProps) => {
 
         <div id="size" className="flex  flex-col gap-3">
           <span className="text-xs font-semibold ">Size:</span>
-          <div className="flex  gap-3">
+          <div className="flex gap-3">
             {product?.sizes.map((size) => (
               <CustomButton
                 key={size}
@@ -102,6 +157,12 @@ const productInformation = ({ id }: productInformationProps) => {
                 buttonType="square"
                 fill={"white"}
                 border
+                className={` border-2 ${
+                  selectedSize === size
+                    ? "border-black-900"
+                    : "border-black-300"
+                }`}
+                onClick={() => setSelectedSize(size)}
               />
             ))}
           </div>
@@ -117,9 +178,10 @@ const productInformation = ({ id }: productInformationProps) => {
               buttonType="square"
               fill={"gray"}
               className=" font-semibold "
+              onClick={() => quantityHandler("subtract")}
             />
             <CustomButton
-              label="2"
+              label={`${selectedQuantity}`}
               size={"small"}
               buttonType="square"
               fill={"gray"}
@@ -131,6 +193,7 @@ const productInformation = ({ id }: productInformationProps) => {
               buttonType="square"
               fill={"gray"}
               className=" font-semibold "
+              onClick={() => quantityHandler("add")}
             />
           </div>
           <CustomButton
@@ -139,7 +202,8 @@ const productInformation = ({ id }: productInformationProps) => {
             border
             size={"medium"}
             fill={"white"}
-            className="w-full"
+            className="w-full border-black-900"
+            onClick={addToCart}
           />
         </div>
 
@@ -155,7 +219,7 @@ const productInformation = ({ id }: productInformationProps) => {
         </div>
       </div>
 
-     <WishlistComponent/>
+      <WishlistComponent />
     </div>
   );
 };

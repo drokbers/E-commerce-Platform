@@ -18,7 +18,7 @@ interface CustomButtonProps {
   underline?: boolean;
   border?: boolean;
   iconType?: IconType;
-  onclick?: () => void;
+  onClick?: () => void;
   className?: string;
 }
 
@@ -44,7 +44,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   underline = false,
   border = false,
   iconType,
-  onclick,
+  onClick,
   className,
 }) => {
   const getBackgroundColor = () => {
@@ -82,7 +82,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const commonStyles = {
     backgroundColor: getBackgroundColor(),
     isRounded: rounded ? "rounded-3xl" : "",
-    border: border ? "border border-black-900" : "",
+    border: border ? "border" : "",
     iconColor: fill === "black" ? "white" : "black",
     underline: underline ? "underline" : "",
   };
@@ -131,7 +131,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const IconComponent = getIconComponent();
 
   return (
-    <button onClick={onclick}
+    <button onClick={onClick}
       className={` ${className} ${currentSize.styles}  ${commonStyles.border} ${commonStyles.backgroundColor} ${commonStyles.underline} ${commonStyles.isRounded} inline-flex justify-center items-center`}
     >
       {iconSide === "left" && IconComponent && (

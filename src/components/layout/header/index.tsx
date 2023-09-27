@@ -23,7 +23,7 @@ const Header = () => {
           <IconChevronDown color="black" size={18} />
         </div>
         <div className="flex items-center">
-          <Link href="/"> Shop </Link>
+          <Link href="/shop"> Shop </Link>
           <IconChevronDown color="black" size={18} />
         </div>
         <div className="flex items-center">

@@ -21,7 +21,6 @@ const ProductReviews = ({ rating, reviews }: ProductReviewsProps) => {
             <div className="flex gap-0.5 ">{GetStars(rating, 16)}</div>
 
             <span className="text-base  justify-center font-normal ">
-              {reviews.length} Reviews
               {reviews.length > 0
                 ? `${reviews.length} Reviews`
                 : `There are no reviews yet.`}

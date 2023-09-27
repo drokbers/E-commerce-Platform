@@ -48,3 +48,14 @@ export interface Stock {
     [key: string]: number;
   };
 }
+
+export interface CartItem {
+  id: number;
+  title: string;
+  price: number;
+  color: string;
+  size: string;
+  quantity: number;
+  image: string;
+}
+

@@ -25,7 +25,7 @@ const config: Config = withMT({
         50: "#FAFAFB",
         100: "#F5F5F5",
         200: "#EAEAEA",
-        300: "#343434",
+        300: "#CBCBCB",
         400: "#A7A7A7",
         500: "#807E7E",
         600: "#605F5F",

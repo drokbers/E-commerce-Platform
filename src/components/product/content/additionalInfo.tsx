@@ -16,7 +16,7 @@ const AdditionalInfo = ({ size, color, weight }: AdditaionalInfoProps) => {
   return (
     <div>
       <table>
-        <tbody className="flex  flex-col  pt-4 md:pt-8 gap-8">
+        <tbody className="flex  h-32 flex-col  pt-4 md:pt-8 gap-4">
           <tr className="flex gap-10 items-center">
             <td className="text-sm md:text-lg font-semibold">SIZE:</td>
             <td className="text-sm md:text-lg font-normal">
