@@ -5,6 +5,7 @@ import {
   IconAdjustmentsHorizontal,
   IconHelpCircle,
   IconShare,
+  IconTrash
 } from "@tabler/icons-react";
 import React from "react";
 
@@ -31,7 +32,9 @@ type IconType =
   | "heart"
   | "help"
   | "share"
+  | "trash"
   | "settings";
+
 type RoundedType = "rounded" | "rounded-full" | "rounded-3xl";
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -74,6 +77,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         return IconShare;
       case "settings":
         return IconAdjustmentsHorizontal;
+      case "trash":
+        return IconTrash;
       default:
         return null;
     }

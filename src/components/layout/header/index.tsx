@@ -12,7 +12,7 @@ import {
 
 const Header = () => {
   return (
-    <div className="flex  h-16  pl-14  bg-white-100 pt-5 pr-14  items-center justify-between">
+    <div className="flex  h-16  pl-4 pr-4 md:pl-14  bg-white-100 pt-5 md:pr-14  items-center justify-between">
       <Link href="/">
         <Image src={Logo} alt="Logo" />{" "}
       </Link>
