@@ -6,6 +6,9 @@ function useLocalStorage<T>(
   initialValue: T
 ): [T, React.Dispatch<React.SetStateAction<T>>] {
   const getStoredValue = () => {
+    if (!key || typeof window === 'undefined') {
+      return ""
+  }
     try {
       const item = localStorage.getItem(key);
       return item ? JSON.parse(item) : initialValue;

@@ -1,23 +1,12 @@
 "use client";
 
 import { IconTruck } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
+
+import { useSelector } from "react-redux";
+import { CartState } from "@/types/model";
 
 const CartGoal = () => {
-  const [carttotal, setCartTotal] = useState<number>(0);
-
-
-
-
-  useEffect(() => {
-    const cartData = localStorage.getItem("cart");
-    const cart = cartData ? JSON.parse(cartData) : [];
-    let total = 0;
-    cart.map((item: { price: number; quantity: number }) => {
-      total += item.price * item.quantity;
-    });
-    setCartTotal(total);
-  }, []);
+  const { total } = useSelector((state: { cart: CartState }) => state.cart);
 
   const RANGES = {
     FREE_SHIPPING: 100,
@@ -28,28 +17,32 @@ const CartGoal = () => {
   };
 
   const goalRange = (): string => {
-    if (carttotal <= RANGES.MINIMUM) return "left-0";
-    if (carttotal <= RANGES.QUARTER) return "left-1/4";
-    if (carttotal <= RANGES.HALF) return "left-1/2";
-    if (carttotal <= RANGES.THREE_QUARTER) return "left-3/4";
-    if (carttotal > RANGES.FREE_SHIPPING) return "right-0";
+    if (total <= RANGES.MINIMUM) return "left-0";
+    if (total <= RANGES.QUARTER) return "left-1/4";
+    if (total <= RANGES.HALF) return "left-1/2";
+    if (total <= RANGES.THREE_QUARTER) return "left-3/4";
+    if (total > RANGES.FREE_SHIPPING) return "right-0";
     return "";
   };
-  console.log(goalRange(), "range");
 
+  console.log(total);
   const goalText = (): JSX.Element => {
-    if (carttotal < RANGES.FREE_SHIPPING)
+    if (total < RANGES.FREE_SHIPPING)
       return (
         <span>
           {"Shop for $"}
-          {RANGES.FREE_SHIPPING - carttotal}
+          {RANGES.FREE_SHIPPING - total}
           {" more to enjoy "}
           <b>FREE Shipping</b>
         </span>
       );
 
-    if (carttotal > RANGES.FREE_SHIPPING)
-      return <span>Enjoy with  <b>FREE Shipping</b></span>;
+    if (total > RANGES.FREE_SHIPPING)
+      return (
+        <span>
+          Enjoy with <b>FREE Shipping</b>
+        </span>
+      );
 
     return <span></span>;
   };

@@ -32,9 +32,6 @@ const Shop = () => {
     }
   };
 
-  console.log("Current gridCount:", gridCount);
-  console.log("Current leftFilter:", leftFilter);
-
   return (
     <div className="flex  pr-4 pl-4 md:pr-12 md:pl-12 ">
       {openLeftBar() && <LeftBarFilters setCloseFilter={setleftFilter} />}

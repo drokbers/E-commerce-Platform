@@ -3,7 +3,6 @@ import CustomButton from "../button";
 
 interface CustomFormProps {
   label?: string;
-  size?: SizeType;
   formType?: FormType;
   iconSide?: IconSideType;
   hint?: string;
@@ -14,12 +13,10 @@ interface CustomFormProps {
 }
 
 type FormType = "input" | "textarea";
-type SizeType = "small" | "large";
 type IconSideType = "left" | "right" | "both";
 
 const CustomForm: React.FC<CustomFormProps> = ({
   label,
-  size,
   iconSide,
   hint,
   placeholder,
@@ -37,7 +34,7 @@ const CustomForm: React.FC<CustomFormProps> = ({
     );
 
   const inputClassNames = [
-    "block w-full p-4 text-sm text-gray-900 border border-black-300 rounded-lg bg-white-100 focus:ring-black-900 focus:border-black-900",
+    "block w-full p-4 text-sm text-gray-900 border border-black-300 rounded-lg bg-white-100 focus:ring-black-900 focus:border-black-900 focus:outline-none",
     (iconSide === "left" || iconSide === "both") && "pl-12",
   ].join(" ");
 

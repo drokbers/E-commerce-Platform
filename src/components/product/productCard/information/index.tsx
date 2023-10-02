@@ -1,15 +1,16 @@
 "use client";
 import { IconEye } from "@tabler/icons-react";
 
+import { useState } from "react";
+
+import { CartItem } from "@/types/model";
+import useCart from "@/hooks/useCart";
+
 import CustomButton from "@/components/layout/button";
 import BreadCrumbs from "@/components/layout/breadCrumbs";
 import GetStars from "@/utils/getStars";
 import WishlistComponent from "@/components/layout/wishlist";
 import ProductData from "@/product.json";
-import { useState } from "react";
-import useLocalStorage from "@/hooks/useLocalStorage";
-
-import { CartItem } from "@/types/model";
 
 interface ProductInfoProps {
   id: string;
@@ -20,7 +21,8 @@ const productInformation = ({ id }: ProductInfoProps) => {
   const [selectedColor, setSelectedColor] = useState<string>("");
   const [selectedSize, setSelectedSize] = useState<string>("");
   const [selectedQuantity, setSelectedQuantity] = useState<number>(1);
-  const [cart, setCart] = useLocalStorage<CartItem[]>("cart", []);
+
+  const { addProduct, isProductInCart } = useCart();
 
   const product = ProductData.find((item) => item.id === Number(id));
   const breadCrumbsData = [`${product?.category}`, `${product?.title}`];
@@ -48,11 +50,6 @@ const productInformation = ({ id }: ProductInfoProps) => {
     });
   };
 
-  const isSameItem = (item1: CartItem, item2: CartItem) =>
-    item1.id === item2.id &&
-    item1.color === item2.color &&
-    item1.size === item2.size;
-
   const addToCart = () => {
     if (!product) return;
 
@@ -71,21 +68,13 @@ const productInformation = ({ id }: ProductInfoProps) => {
       image: product.photos[0],
     };
 
-    const itemIndex = cart.findIndex((item) => isSameItem(item, cartItem));
+    if (isProductInCart(product.id, selectedColor, selectedSize)) {
+      alert("This item with the selected attributes is already in the cart.");
+      return;
+    }
 
-    const updatedCart =
-      itemIndex !== -1
-        ? [
-            ...cart.slice(0, itemIndex),
-            {
-              ...cart[itemIndex],
-              quantity: cart[itemIndex].quantity + selectedQuantity,
-            },
-            ...cart.slice(itemIndex + 1),
-          ]
-        : [...cart, cartItem];
-
-    setCart(updatedCart);
+    addProduct(cartItem);
+    alert("Item added to cart.");
   };
 
   return (

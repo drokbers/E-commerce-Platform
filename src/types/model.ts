@@ -59,3 +59,7 @@ export interface CartItem {
   image: string;
 }
 
+export interface CartState {
+  cartItems: CartItem[];
+  total: number;
+}

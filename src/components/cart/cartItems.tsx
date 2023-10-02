@@ -1,27 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { CartItem } from "@/types/model";
 import Image from "next/image";
 
 import CustomButton from "../layout/button";
+import useCart from "@/hooks/useCart";
+import Link from "next/link";
 
 const CartItems = () => {
+  const { updateQuantity, getCartContent, removeProduct } = useCart();
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    const cartData = localStorage.getItem("cart");
-    const initialCart = cartData ? JSON.parse(cartData) : [];
-    setCart(initialCart);
-  }, []);
+    setCart(getCartContent());
+  }, [getCartContent]);
 
-  const removeItemFromCart = (id: string) => {
-    const updatedCart = cart.filter((item) => item.id.toString() !== id);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
-    setCart(updatedCart);
-  };
-
-  const addToCartButtons = (item: { quantity: any }) => {
+  const addToCartButtons = (item: { quantity: number }, index: number) => {
     return (
       <>
         <CustomButton
@@ -30,7 +25,7 @@ const CartItems = () => {
           buttonType="square"
           fill={"white"}
           className=" font-semibold "
-          onClick={() => null}
+          onClick={() => updateQuantity(index, -1)}
         />
         <CustomButton
           label={`${item.quantity}`}
@@ -45,7 +40,7 @@ const CartItems = () => {
           buttonType="square"
           fill={"white"}
           className=" font-semibold "
-          onClick={() => null}
+          onClick={() => updateQuantity(index, 1)}
         />
       </>
     );
@@ -64,7 +59,7 @@ const CartItems = () => {
       </div>
 
       <div className="flex divide-y flex-col ">
-        {cart.map((item: CartItem) => (
+        {cart.map((item: CartItem, index) => (
           <div className="flex justify-between text-base  pb-6 pt-6  items-center font-medium ">
             <div className="flex md:w-1/2 gap-4">
               <Image
@@ -75,7 +70,14 @@ const CartItems = () => {
               />
 
               <div className="flex flex-col gap-2">
-                <span className="text-sm font-semibold "> {item.title}</span>
+                <Link href={`/product/${item.id}`}>
+                  {" "}
+                  <span className="text-sm font-semibold ">
+                    {" "}
+                    {item.title}
+                  </span>{" "}
+                </Link>
+
                 <span className=" text-xs font-normal text-black-600">
                   Size: {item.size}, Color: {item.color}
                 </span>
@@ -86,32 +88,28 @@ const CartItems = () => {
                     iconSide="left"
                     label="Remove"
                     size={"small"}
-                    onClick={() => {
-                      removeItemFromCart(item.id.toString());
-                    }}
+                    onClick={() => removeProduct(index)}
                   />
                 </div>
                 <div className="flex md:hidden border">
-                  {addToCartButtons(item)}
+                  {addToCartButtons(item, index)}
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row gap-2 md:w-1/2 items-center justify-between">
               <div className="hidden md:flex border">
-                {addToCartButtons(item)}
+                {addToCartButtons(item, index)}
               </div>
               <span className="hidden md:flex">{item.price}</span>
-              <span>{item.price * item.quantity}</span>
+              <span>{(item.price * item.quantity).toFixed(2)}</span>
               <div className="flex md:hidden gap-1 text-black-600">
                 <CustomButton
                   buttonType="text"
                   iconType="trash"
                   iconSide="left"
                   size={"small"}
-                  onClick={() => {
-                    removeItemFromCart(item.id.toString());
-                  }}
+                  onClick={() => removeProduct(index)}
                 />
               </div>
             </div>
