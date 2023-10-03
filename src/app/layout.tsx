@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ReduxProvider } from "@/redux/provider";
+import FlyOutCart from "@/components/cart/flyOutCart";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white-100`}>
-        {" "}
-        <ReduxProvider>{children}</ReduxProvider>
+      <body className={`${inter.className} bg-white-100 `}>
+        <ReduxProvider>
+        <FlyOutCart />
+          {children}
+         
+        </ReduxProvider>
       </body>
     </html>
   );

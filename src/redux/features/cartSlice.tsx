@@ -4,6 +4,7 @@ import { CartState, CartItem } from "@/types/model";
 const initialState: CartState = {
   cartItems: [],
   total: 0,
+  isFlyoutOpen: false,
 };
 
 export const cartSlice = createSlice({
@@ -26,8 +27,12 @@ export const cartSlice = createSlice({
     cartTotal: (state, action: PayloadAction<number>) => {
         state.total = action.payload;
     },
+    cartFlyOut: (state, action: PayloadAction<boolean>) => {
+      state.isFlyoutOpen = action.payload;
+    }
+
   },
 });
 
-export const { addCartItem, removeCartItem, cartTotal } = cartSlice.actions;
+export const { addCartItem, removeCartItem, cartTotal,cartFlyOut } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { CartItem } from "@/types/model";
 import Image from "next/image";
 
@@ -71,11 +71,7 @@ const CartItems = () => {
 
               <div className="flex flex-col gap-2">
                 <Link href={`/product/${item.id}`}>
-                  {" "}
-                  <span className="text-sm font-semibold ">
-                    {" "}
-                    {item.title}
-                  </span>{" "}
+                  <span className="text-sm font-semibold ">{item.title}</span>
                 </Link>
 
                 <span className=" text-xs font-normal text-black-600">

@@ -8,11 +8,12 @@ import IconBox from "@/components/home/iconBox";
 import Footer from "@/components/layout/footer";
 
 import TestimonialBlock from "@/components/home/testimonial";
+import FlyOutCart from "@/components/cart/flyOutCart";
 // import Newsletter from '@/components/newsletter'
 
 export default function Home() {
   return (
-    <div className="flex flex-col ">
+    <div className="relative flex flex-col ">
       <Header />
       <Slider />
       <ProductCarousel title="Latest Arrivals" />
@@ -21,6 +22,7 @@ export default function Home() {
       <FeatureSectionPhoto />
       <TestimonialBlock />
       {/* <Newsletter/> */}
+     
       <IconBox />
       <Footer />
     </div>

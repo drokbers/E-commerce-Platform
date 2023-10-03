@@ -11,6 +11,8 @@ import BreadCrumbs from "@/components/layout/breadCrumbs";
 import GetStars from "@/utils/getStars";
 import WishlistComponent from "@/components/layout/wishlist";
 import ProductData from "@/product.json";
+import { useDispatch } from "react-redux";
+import { cartFlyOut } from "@/redux/features/cartSlice";
 
 interface ProductInfoProps {
   id: string;
@@ -26,6 +28,8 @@ const productInformation = ({ id }: ProductInfoProps) => {
 
   const product = ProductData.find((item) => item.id === Number(id));
   const breadCrumbsData = [`${product?.category}`, `${product?.title}`];
+
+  const dispatch = useDispatch();
 
   const iconColors = (color: string) => {
     switch (color) {
@@ -74,7 +78,7 @@ const productInformation = ({ id }: ProductInfoProps) => {
     }
 
     addProduct(cartItem);
-    alert("Item added to cart.");
+    dispatch(cartFlyOut(true));
   };
 
   return (
