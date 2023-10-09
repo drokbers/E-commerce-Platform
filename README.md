@@ -49,6 +49,8 @@ pnpm dev
 <img src="https://i.imgur.com/xwcbkD7.png" alt="Home Page" width="300" height="700" />
 <img src="https://i.imgur.com/goGp2H2.png" alt="Product Page" width="300"  height="700" />
 <img src="https://i.imgur.com/qyjaazd.png" alt="Search Page" width="300"  height="700" />
+<img src="https://i.imgur.com/4oHaWcK.png" alt="Search Page" width="300"  height="700" />
+
   
 </div>
 
