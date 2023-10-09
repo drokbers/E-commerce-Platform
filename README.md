@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# SHOPR E-Commerce Platform
 
-First, run the development server:
+This project is a full-stack e-commerce platform developed using React, Next.js, TypeScript, and Node.js. It offers a seamless shopping experience with a user-friendly interface, advanced search and filtering capabilities, secure payment processing, and robust backend functionality. Explore our codebase to witness the power of modern web technologies in action!
+## Demo
+
+https://e-commerce-drokbers.vercel.app/
+
+## Features
+
+**Done:**
+- Responsive Design
+- Versatile components for a customized UI
+- LocalStorage & Redux for cart data
+- User-Friendly Interface
+- Fast Loading Times
+
+**Progress:**
+- Advanced Search and Filtering 
+- SSR
+
+**Future:**
+- Product Reviews and Ratings 
+- Inventory Tracking
+- Admin Dashboard
+- Stripe integration
+## Tech Stack
+
+**Client:** Next.js, React, TypeScript, TailwindCSS
+
+**Server:** Node, Express
+
+
+## Deployment
+
+To deploy this project run
 
 ```bash
 npm run dev
@@ -12,24 +43,16 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Screenshots
+<div style="display: flex; justify-content: space-between;">
+<img src="https://i.imgur.com/xwcbkD7.png" alt="Home Page" width="300" height="700" />
+<img src="https://i.imgur.com/goGp2H2.png" alt="Product Page" width="300"  height="700" />
+<img src="https://i.imgur.com/qyjaazd.png" alt="Search Page" width="300"  height="700" />
+  
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Authors
 
-## Learn More
+- [@Drokbers](https://github.com/drokbers)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# E-commerce
