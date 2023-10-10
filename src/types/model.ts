@@ -63,4 +63,5 @@ export interface CartState {
   cartItems: CartItem[];
   total: number;
   isFlyoutOpen: boolean;
+  shipping: number;
 }

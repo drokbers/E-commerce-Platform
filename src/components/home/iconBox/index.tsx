@@ -43,7 +43,6 @@ const IconBox = () => {
             <div className="flex flex-col">
               <span className="text-lg font-medium "> {item.textBold} </span>
               <span className="text-sm font-normal  text-black-500">
-
                 {item.textNormal}
               </span>
             </div>

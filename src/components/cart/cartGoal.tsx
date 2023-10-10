@@ -25,7 +25,6 @@ const CartGoal = () => {
     return "";
   };
 
-  console.log(total);
   const goalText = (): JSX.Element => {
     if (total < RANGES.FREE_SHIPPING)
       return (

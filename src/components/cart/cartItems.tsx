@@ -1,16 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+
 import { CartItem } from "@/types/model";
 import Image from "next/image";
+import { removeFromCart, updateQuantity } from "@/redux/features/cartSlice";
 
 import CustomButton from "../layout/button";
 import useCart from "@/hooks/useCart";
 import Link from "next/link";
 
 const CartItems = () => {
-  const { updateQuantity, getCartContent, removeProduct } = useCart();
+  const { getCartContent } = useCart();
   const [cart, setCart] = useState<CartItem[]>([]);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setCart(getCartContent());
@@ -25,7 +30,7 @@ const CartItems = () => {
           buttonType="square"
           fill={"white"}
           className=" font-semibold "
-          onClick={() => updateQuantity(index, -1)}
+          onClick={() => dispatch(updateQuantity({ index, change: -1 }))}
         />
         <CustomButton
           label={`${item.quantity}`}
@@ -40,7 +45,7 @@ const CartItems = () => {
           buttonType="square"
           fill={"white"}
           className=" font-semibold "
-          onClick={() => updateQuantity(index, 1)}
+          onClick={() => dispatch(updateQuantity({ index, change: 1 }))}
         />
       </>
     );
@@ -63,6 +68,7 @@ const CartItems = () => {
           <div className="flex justify-between text-base  pb-6 pt-6  items-center font-medium ">
             <div className="flex md:w-1/2 gap-4">
               <Image
+                key={index}
                 src={item.image}
                 width={77}
                 height={102}
@@ -84,7 +90,7 @@ const CartItems = () => {
                     iconSide="left"
                     label="Remove"
                     size={"small"}
-                    onClick={() => removeProduct(index)}
+                    onClick={() => dispatch(removeFromCart({ id: item.id, color: item.color, size: item.size }))}
                   />
                 </div>
                 <div className="flex md:hidden border">
@@ -105,7 +111,7 @@ const CartItems = () => {
                   iconType="trash"
                   iconSide="left"
                   size={"small"}
-                  onClick={() => removeProduct(index)}
+                  onClick={() => dispatch(removeFromCart({ id: item.id, color: item.color, size: item.size }))}
                 />
               </div>
             </div>

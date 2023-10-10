@@ -4,6 +4,7 @@ import CustomButton from "../button";
 interface CustomFormProps {
   label?: string;
   formType?: FormType;
+  inputType?: InputType;
   iconSide?: IconSideType;
   hint?: string;
   placeholder?: string;
@@ -14,6 +15,7 @@ interface CustomFormProps {
 
 type FormType = "input" | "textarea";
 type IconSideType = "left" | "right" | "both";
+type InputType = "text" | "email" | "password" | "search";
 
 const CustomForm: React.FC<CustomFormProps> = ({
   label,
@@ -22,6 +24,7 @@ const CustomForm: React.FC<CustomFormProps> = ({
   placeholder,
   buttonLabel,
   className,
+  inputType = "text",
   onClick,
 }) => {
   const renderIcon = (position: IconSideType) =>
@@ -39,9 +42,9 @@ const CustomForm: React.FC<CustomFormProps> = ({
   ].join(" ");
 
   return (
-    <form className={`flex flex-col gap-2 ${className}`}>
+    <form className={`flex flex-col gap-2 text-left ${className}`}>
       {label && (
-        <label className="mb-2 text-sm font-semibold text-blue-100">
+        <label className=" text-sm font-semibold text-blue-100">
           {label}
         </label>
       )}
@@ -50,11 +53,12 @@ const CustomForm: React.FC<CustomFormProps> = ({
         {renderIcon("left")}
 
         <input
-          type="search"
+          type={inputType}
           id="default-search"
           className={inputClassNames}
           placeholder={placeholder || "Search"}
           aria-label={label || "Search"}
+        
         />
 
         {renderIcon("right")}

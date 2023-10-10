@@ -100,8 +100,8 @@ const Footer = () => {
         </div>
 
         <div className="md:hidden ">
-          {Dummy.map((item) => (
-            <CustomAccordion title={item.title} text={item.text} />
+          {Dummy.map((item, index) => (
+            <CustomAccordion title={item.title} text={item.text} key={index} />
           ))}
         </div>
       </div>

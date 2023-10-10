@@ -100,7 +100,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         iconSize: 22,
       },
       medium: {
-        styles: "w-auto h-12 px-6 py-2.5 gap-1  text-lg",
+        styles: "w-full h-12 px-6 py-2.5 gap-1  text-lg",
         iconSize: 26,
       },
       large: { styles: "w-auto h-16  px-11 py-5 gap-2 text-xl", iconSize: 30 },

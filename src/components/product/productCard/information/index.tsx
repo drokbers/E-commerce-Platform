@@ -12,7 +12,7 @@ import GetStars from "@/utils/getStars";
 import WishlistComponent from "@/components/layout/wishlist";
 import ProductData from "@/product.json";
 import { useDispatch } from "react-redux";
-import { cartFlyOut } from "@/redux/features/cartSlice";
+import { toggleCartFlyOut } from "@/redux/features/cartSlice";
 
 interface ProductInfoProps {
   id: string;
@@ -30,7 +30,6 @@ const productInformation = ({ id }: ProductInfoProps) => {
   const breadCrumbsData = [`${product?.category}`, `${product?.title}`];
 
   const dispatch = useDispatch();
-
   const iconColors = (color: string) => {
     switch (color) {
       case "green":
@@ -78,7 +77,7 @@ const productInformation = ({ id }: ProductInfoProps) => {
     }
 
     addProduct(cartItem);
-    dispatch(cartFlyOut(true));
+    dispatch(toggleCartFlyOut(true));
   };
 
   return (

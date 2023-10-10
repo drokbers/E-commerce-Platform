@@ -34,10 +34,11 @@ const DUMMY = [
 const CategoryGrid = () => {
   return (
     <div className="grid  grid-cols-1 md:grid-cols-2 gap-8 w-full p-12">
-      {DUMMY.map((item) => {
+      {DUMMY.map((item,index) => {
         return (
           <div key={item.id} className="relative  w-auto h-96">
             <Image
+            key={index}
               src={item.image}
               layout="fill"
               objectFit="cover"

@@ -4,9 +4,11 @@ import { useState } from "react";
 import CustomButton from "../layout/button";
 import CustomForm from "../layout/form";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setShippingOption } from "@/redux/features/cartSlice";
 
 import { CartState } from "@/types/model";
+import Link from "next/link";
 const CartSummary = () => {
   const [selectedShipping, setSelectedShipping] = useState<{
     id: number;
@@ -26,6 +28,8 @@ const CartSummary = () => {
       price: 10,
     },
   ];
+
+  const dispatch = useDispatch();
 
   const { total } = useSelector((state: { cart: CartState }) => state.cart);
 
@@ -58,6 +62,7 @@ const CartSummary = () => {
             <div
               onClick={() => {
                 setSelectedShipping(option);
+                dispatch(setShippingOption(option.price));
               }}
               className="flex border p-4 items-center gap-3 justify-between "
             >
@@ -92,8 +97,10 @@ const CartSummary = () => {
             </span>
           </div>
         </div>
-
-        <CustomButton fill="black" label="Checkout" size={"medium"} />
+        <Link href={`/checkout`}>
+          {" "}
+          <CustomButton fill="black" label="Checkout" size={"medium"} />
+        </Link>
       </div>
     </div>
   );

@@ -59,13 +59,14 @@ const ProductSlider = ({ id }: ProductSliderProps) => {
       </div>
 
       <div className="hidden md:flex gap-2 w-full justify-between ">
-        {product?.photos?.map((item) => (
+        {product?.photos?.map((item, index) => (
           <div className="relative w-[10vw] h-[13vw]">
             <Image
+              key={index}
               src={item}
               fill
               alt="product image"
-              className=" rounded-md hover:ring-4 ring-black-200"
+              className="rounded-md hover:ring-4 ring-black-200"
               onClick={() => setCurrentImage(item)}
             />
           </div>

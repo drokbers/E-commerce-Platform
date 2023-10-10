@@ -123,9 +123,9 @@ const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
         <div id="section list" className="flex flex-col gap-4">
           <span className="text-sm font-semibold">CATEGORIES</span>
           <div className="flex flex-col gap-3">
-            {DummyCategory.map((item) => {
+            {DummyCategory.map((item,index) => {
               return (
-                <div>
+                <div key={index}>
                   <CustomButton
                     label={item.name}
                     buttonType={"text"}

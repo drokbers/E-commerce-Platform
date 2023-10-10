@@ -1,5 +1,5 @@
 "use client";
-import Header from "@/components/layout/header";
+import {Header} from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import ProductCard from "@/components/product/productCard";
 import ProductContent from "@/components/product/content";
@@ -18,7 +18,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       }`}
     >
       <Header />
-    
       <ProductCard id={params.id} />
       <ProductContent id={params.id} />
       <ProductCarousel title="You might also like" />
