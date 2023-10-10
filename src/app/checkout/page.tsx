@@ -25,7 +25,7 @@ export default function CheckoutPage() {
           <ContactInformation />
           <ShippingInformation />
           <ShippingMethod />
-          <div className="hidden md:flex">
+          <div className="hidden md:flex flex-col">
             <PaymentInformation />
           </div>
 

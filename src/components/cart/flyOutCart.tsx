@@ -70,7 +70,7 @@ const FlyOutCart: React.FC = () => {
 
         <div
           id="cartItems"
-          className="flex divide-y h-[52vh] flex-col overflow-auto"
+          className="flex divide-y h-[50vh] flex-col overflow-auto"
         >
           {cartItems.map((item: CartItem, index) => (
             <div className="flex  pt-4 pb-4 justify-between">
@@ -98,7 +98,7 @@ const FlyOutCart: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex  gap-2 justify-end items-end">
+              <div className="flex  gap-2 pb- justify-end items-end">
                 <span>{(item.price * item.quantity).toFixed(2)}</span>
                 <CustomButton
                   buttonType="text"

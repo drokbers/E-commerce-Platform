@@ -90,7 +90,15 @@ const CartItems = () => {
                     iconSide="left"
                     label="Remove"
                     size={"small"}
-                    onClick={() => dispatch(removeFromCart({ id: item.id, color: item.color, size: item.size }))}
+                    onClick={() =>
+                      dispatch(
+                        removeFromCart({
+                          id: item.id,
+                          color: item.color,
+                          size: item.size,
+                        })
+                      )
+                    }
                   />
                 </div>
                 <div className="flex md:hidden border">
@@ -111,7 +119,15 @@ const CartItems = () => {
                   iconType="trash"
                   iconSide="left"
                   size={"small"}
-                  onClick={() => dispatch(removeFromCart({ id: item.id, color: item.color, size: item.size }))}
+                  onClick={() =>
+                    dispatch(
+                      removeFromCart({
+                        id: item.id,
+                        color: item.color,
+                        size: item.size,
+                      })
+                    )
+                  }
                 />
               </div>
             </div>
