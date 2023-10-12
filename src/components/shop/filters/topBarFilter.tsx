@@ -12,30 +12,40 @@ import {
   twoList,
 } from "@/assets/icons";
 import useResizeGrid from "@/hooks/useResizeGrid";
+import { Filters } from "@/types/model";
 
 interface TopBarFilterProps {
   setParentGridCount: (count: number) => void;
   setLeftBar: (isOpen: boolean) => void;
   leftFilterStatus: boolean;
+  selectedFiltersTop: Filters;
+  onShortByUpdate: (shortBy: string) => void;
 }
 
 const TopBarFilter: React.FC<TopBarFilterProps> = ({
   setParentGridCount,
   setLeftBar,
   leftFilterStatus,
+  selectedFiltersTop,
+  onShortByUpdate,
 }) => {
-  const [selectedFilters, setSelectedFilters] = useState(["Plants", "Cactus"]);
+  const [selectedFilters, setSelectedFilters] = useState(["", ""]);
   const [activeGridCount, setActiveGridCount] = useState<number>(5);
   const gridCount = useResizeGrid(4);
+  const [isShortbyOpen, setShortbyOpen] = useState(false);
+
+  const shortByFilters = ["Low to High", "High to Low", "Newest", "Popularity"];
+
+  useEffect(() => {
+    setSelectedFilters(selectedFiltersTop.category);
+  }, [selectedFiltersTop]);
 
   useEffect(() => {
     if (gridCount === 2) {
       setActiveGridCount(2);
       setParentGridCount(2);
       return;
-    }
-    else if 
-    (gridCount === 1) {
+    } else if (gridCount === 1) {
       setActiveGridCount(1);
       setParentGridCount(1);
       return;
@@ -67,7 +77,7 @@ const TopBarFilter: React.FC<TopBarFilterProps> = ({
         <span className="text-black-600 text-base font-normal">
           134 products
         </span>
-        <div className="hidden gap-8 lg:flex justify-between">
+        <div className="hidden  gap-8 lg:flex justify-between">
           <CustomButton
             iconSide="right"
             iconType="settings"
@@ -78,13 +88,35 @@ const TopBarFilter: React.FC<TopBarFilterProps> = ({
             onClick={toggleLeftFilter}
           />
 
-          <CustomButton
-            label="Sort by"
-            buttonType="text"
-            iconSide="right"
-            iconType="ChevronDown"
-            size="medium"
-          />
+          <div className="relative flex ">
+            <CustomButton
+              label="Sort by"
+              buttonType="text"
+              className="flex items-center"
+              iconSide="right"
+              iconType="ChevronDown"
+              size="medium"
+              onClick={() => setShortbyOpen(!isShortbyOpen)}
+            />
+            {isShortbyOpen && (
+              <div className="absolute  top-8 z-10 flex w-28 h-36 gap-2  pt-4 rounded-sm bg-white-100 shadow-lg flex-col">
+                {shortByFilters.map((filter) => (
+                  <div key={filter} className="flex items-center   ">
+                    <div
+                      className="text-base cursor-pointer font-medium w-full flex  pl-2  justify-start hover:bg-black-200 text-black-500"
+                      onClick={() => {
+                        onShortByUpdate(filter);
+                        setShortbyOpen(false);
+                      }}
+                    >
+                      {filter}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           <div className="flex items-center">
             {gridData.map(
               (grid) =>
@@ -140,7 +172,10 @@ const TopBarFilter: React.FC<TopBarFilterProps> = ({
           </div>
         </div>
 
-        <div id="selectedFilters" className="flex gap-4 items-center">
+        <div
+          id="selectedFilters"
+          className="flex gap-4 cursor-pointer items-center"
+        >
           {selectedFilters.map((filter) => (
             <Fragment key={filter}>
               <CustomBadge
@@ -148,12 +183,24 @@ const TopBarFilter: React.FC<TopBarFilterProps> = ({
                 fill="gray"
                 iconSide="left"
                 size="small"
+                onClick={() => {
+                  setSelectedFilters(
+                    selectedFilters.filter((item) => item !== filter)
+                  );
+                }}
               />
             </Fragment>
           ))}
-          <button className="flex text-xs font-semibold text-black-500 gap-0.5 h-5 justify-start items-center">
-            <IconX size={14} color="black" /> Clear All
-          </button>
+          {selectedFilters.length > 0 && (
+            <button
+              onClick={() => {
+                setSelectedFilters([]);
+              }}
+              className="flex text-xs font-semibold text-black-500 gap-0.5 h-5 justify-start items-center"
+            >
+              <IconX size={14} color="black" /> Clear All
+            </button>
+          )}
         </div>
       </div>
     </div>

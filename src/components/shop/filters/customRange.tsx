@@ -1,14 +1,38 @@
 "use client";
 import * as React from "react";
 import { Range, getTrackBackground } from "react-range";
+import { useState, useEffect } from "react";
+
+import ProductData from "@/product.json";
+
+type CustomRangeProps = {
+  onPriceRange: (values: number[]) => void;
+  rtl: boolean;
+};
+
+const calculateMaxPrice = () => {
+  let max = 0;
+  ProductData.forEach((product) => {
+    if (product.price > max) {
+      max = product.price;
+    }
+  });
+  return max;
+};
 
 const STEP = 0.1;
 const MIN = 0;
-const MAX = 100;
+const MAX = calculateMaxPrice();
 
-// Copy of TwoThumbs with `draggableTrack` prop added
-const CustomRange: React.FC<{ rtl: boolean }> = ({ rtl }) => {
-  const [values, setValues] = React.useState([25, 75]);
+const CustomRange: React.FC<CustomRangeProps> = ({
+  rtl,
+  onPriceRange
+}) => {
+  const [values, setValues] = useState<number[]>([0, MAX]);
+
+  useEffect(() => {
+    onPriceRange(values); }, [values]);
+
   return (
     <div
       style={{

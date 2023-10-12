@@ -9,10 +9,10 @@ const CartGoal = () => {
   const { total } = useSelector((state: { cart: CartState }) => state.cart);
 
   const RANGES = {
-    FREE_SHIPPING: 100,
-    THREE_QUARTER: 75,
-    HALF: 50,
-    QUARTER: 25,
+    FREE_SHIPPING: 200,
+    THREE_QUARTER: 150,
+    HALF: 100,
+    QUARTER: 50,
     MINIMUM: 10,
   };
 

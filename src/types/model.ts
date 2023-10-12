@@ -65,3 +65,12 @@ export interface CartState {
   isFlyoutOpen: boolean;
   shipping: number;
 }
+
+export interface Filters {
+  category: string[],
+  color: string[],
+  size: string[],
+  style: string[],
+  price: number[],
+}
+

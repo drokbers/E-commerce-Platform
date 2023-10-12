@@ -5,7 +5,7 @@ import {
   IconAdjustmentsHorizontal,
   IconHelpCircle,
   IconShare,
-  IconTrash
+  IconTrash,
 } from "@tabler/icons-react";
 import React from "react";
 
@@ -21,6 +21,7 @@ interface CustomButtonProps {
   iconType?: IconType;
   onClick?: () => void;
   className?: string;
+  isDisabled?: boolean;
 }
 
 type ButtonSize = "xsmall" | "small" | "medium" | "large" | "xlarge";
@@ -49,15 +50,17 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   iconType,
   onClick,
   className,
+  isDisabled = false,
 }) => {
   const getBackgroundColor = () => {
     switch (fill) {
+      case "gray":
+        return "bg-black-100  text-black-900";
       case "black":
         return "bg-black-900 text-white-900";
       case "white":
         return "bg-white-100 text-black-900";
-      case "gray":
-        return "bg-black-100  text-black-900";
+
       default:
         return "bg-transparent text-black-900";
     }
@@ -90,6 +93,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     border: border ? "border" : "",
     iconColor: fill === "black" ? "white" : "black",
     underline: underline ? "underline" : "",
+    disabled: isDisabled ? "opacity-50 cursor-not-allowed" : "",
   };
 
   const sizeStyles = {
@@ -136,8 +140,10 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const IconComponent = getIconComponent();
 
   return (
-    <button onClick={onClick}
-      className={` ${className} ${currentSize.styles}  ${commonStyles.border} ${commonStyles.backgroundColor} ${commonStyles.underline} ${commonStyles.isRounded} inline-flex justify-center items-center`}
+    <button
+      onClick={onClick}
+      disabled={isDisabled}
+      className={` ${className} ${currentSize.styles} ${commonStyles.disabled} ${commonStyles.border} ${commonStyles.backgroundColor} ${commonStyles.underline} ${commonStyles.isRounded} inline-flex justify-center items-center`}
     >
       {iconSide === "left" && IconComponent && (
         <IconComponent

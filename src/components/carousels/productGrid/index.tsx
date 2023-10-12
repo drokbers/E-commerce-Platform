@@ -1,8 +1,19 @@
+"use client";
+import { useState } from "react";
 import CustomButton from "../../layout/button";
 import ProductItem from "../productCarousel/productItem";
 import ProductData from "@/product.json";
 
 const productGrid = () => {
+  const [loadedProducts, setLoadedProducts] = useState<number>(8);
+
+  const loadMoreHandler = () => {
+    if (loadedProducts >= ProductData.length) {
+      return;
+    }
+    setLoadedProducts(loadedProducts + 4);
+  };
+
   return (
     <div className="flex flex-col   items-center gap-12 p-12">
       <div className="flex  text-2xl font-medium gap-3 items-center justify-center leading-9">
@@ -29,7 +40,7 @@ const productGrid = () => {
       </div>
       <div className="flex flex-col w-full  gap-4 md:gap-8  ">
         <div className="grid grid-cols-2 justify-center  xl:grid-cols-4 gap-8">
-          {ProductData.slice(0, 8).map((item) => (
+          {ProductData.slice(0, loadedProducts).map((item) => (
             <ProductItem
               key={item.id}
               id={item.id}
@@ -47,7 +58,9 @@ const productGrid = () => {
         label={"Load more"}
         size={"medium"}
         fill={"black"}
+        {...(loadedProducts >= ProductData.length && { isDisabled: true })}
         buttonType={"default"}
+        onClick={() => loadMoreHandler()}
       />
     </div>
   );

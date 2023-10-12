@@ -15,7 +15,7 @@ type ProductShopGridProps = {
 const ProductShopGrid: React.FC<ProductShopGridProps> = ({ products, gridCount }) => {
   const isListView = gridCount === 1;
   const ComponentToRender = isListView ? ShopListItem : ShopItem;
-  const gridClasses = `gap-8 flex ${ !isListView ? "flex-wrap" : "flex-col" } justify-center`;
+  const gridClasses = `gap-8 flex ${ !isListView ? "flex-wrap" : "flex-col" } justify-between`;
 
   return (
     <div id="grid" className={gridClasses}>

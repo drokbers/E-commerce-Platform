@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "**.hizliresim.com",
       },
+      {
+        protocol: "https",
+        hostname: "**.farfetch-contents.com",
+      },
     ],
   },
 };

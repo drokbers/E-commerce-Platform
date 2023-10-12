@@ -113,9 +113,9 @@ const productInformation = ({ id }: ProductInfoProps) => {
         </div>
       </div>
 
-      <div id="offer" className="flex pt-6">
+      {/* <div id="offer" className="flex pt-6">
         <span>Offer area to be added later</span>
-      </div>
+      </div> */}
 
       <div id="select" className="flex flex-col  pt-6 gap-6">
         <div id="color" className="flex flex-col gap-3">

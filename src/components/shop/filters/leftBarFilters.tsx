@@ -1,19 +1,18 @@
-
-
-
+"use client";
 import { IconX } from "@tabler/icons-react";
 import CustomButton from "@/components/layout/button";
 import CustomRange from "./customRange";
-
+import { useEffect, useState } from "react";
+import { Filters } from "@/types/model";
 
 const DummyCategory = [
   {
     id: 1,
-    name: "Home & Decor",
+    name: "Clothing",
   },
   {
     id: 2,
-    name: "Clothing",
+    name: "Sandals",
   },
   {
     id: 3,
@@ -21,44 +20,44 @@ const DummyCategory = [
   },
   {
     id: 4,
-    name: "Outdoor",
+    name: "Bags",
   },
 ];
 
 const DummyColor = [
   {
-    id: 1,
+    id: 5,
     name: "red",
   },
   {
-    id: 2,
+    id: 6,
     name: "green",
   },
   {
-    id: 3,
+    id: 7,
     name: "purple",
   },
   {
-    id: 4,
+    id: 8,
     name: "black",
   },
 ];
 
 const DummySize = [
   {
-    id: 1,
+    id: 9,
     name: "S",
   },
   {
-    id: 2,
+    id: 10,
     name: "M",
   },
   {
-    id: 3,
+    id: 11,
     name: "L",
   },
   {
-    id: 4,
+    id: 12,
     name: "XL",
   },
 ];
@@ -103,13 +102,50 @@ const iconColors = (color: string) => {
 
 type LeftBarFiltersProps = {
   setCloseFilter: (value: boolean) => void;
+  onFiltersUpdate: (filters: Filters) => void;
 };
 
-const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
+const LeftBarFilters: React.FC<LeftBarFiltersProps> = ({
+  setCloseFilter,
+  onFiltersUpdate,
+}) => {
+  const [selectedFilters, setSelectedFilters] = useState<Filters>({
+    category: [],
+    color: [],
+    size: [],
+    style: [],
+    price: [],
+  });
 
+  const onPriceRange = (values: number[]) => {
+    setSelectedFilters((prevFilters) => ({
+      ...prevFilters,
+      price: values,
+    }));
+  };
 
+  const filterHandler = (type: keyof Filters, value: string | number[]) => {
+    setSelectedFilters((prev) => {
+      if (type === "price" && Array.isArray(value)) {
+        return { ...prev, price: value as number[] };
+      }
+      if (typeof value === "string" && type !== "price") {
+        const currentFilterValues = prev[type] as string[];
+        const isValueSelected = currentFilterValues.includes(value);
+        const updatedValues = isValueSelected
+          ? currentFilterValues.filter((v) => v !== value)
+          : [...currentFilterValues, value];
+        return { ...prev, [type]: updatedValues };
+      }
 
-  
+      return prev;
+    });
+  };
+
+  useEffect(() => {
+    onFiltersUpdate(selectedFilters);
+  }, [selectedFilters, onFiltersUpdate]);
+
   return (
     <div className="hidden md:flex flex-col   p-6 gap-8">
       <div className="flex justify-between">
@@ -123,13 +159,19 @@ const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
         <div id="section list" className="flex flex-col gap-4">
           <span className="text-sm font-semibold">CATEGORIES</span>
           <div className="flex flex-col gap-3">
-            {DummyCategory.map((item,index) => {
+            {DummyCategory.map((category, index) => {
               return (
                 <div key={index}>
                   <CustomButton
-                    label={item.name}
+                    label={category.name}
                     buttonType={"text"}
                     size={"small"}
+                    className={` ${
+                      selectedFilters.category.includes(category.name)
+                        ? "underline font-semibold"
+                        : "no-underline font-normal"
+                    }`}
+                    onClick={() => filterHandler("category", category.name)}
                   />
                 </div>
               );
@@ -145,8 +187,13 @@ const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
                 key={color.id}
                 size={"xsmall"}
                 buttonType="circle"
-                className={` ${iconColors(color.name)}`}
+                className={` ${
+                  selectedFilters.color.includes(color.name)
+                    ? "ring-black-500 ring-offset-2 ring-1"
+                    : "rings-offset-0 ring-0"
+                }    ${iconColors(color.name)}`}
                 fill={"black"}
+                onClick={() => filterHandler("color", color.name)}
               />
             ))}
           </div>
@@ -163,6 +210,12 @@ const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
                 buttonType="square"
                 fill={"white"}
                 border
+                onClick={() => filterHandler("size", size.name)}
+                className={` ${
+                  selectedFilters.size.includes(size.name)
+                    ? "border-black-900"
+                    : "border-black-300"
+                } `}
               />
             ))}
           </div>
@@ -170,7 +223,7 @@ const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
 
         <div id="price">
           <span className="text-sm font-semibold ">PRICE</span>
-          <CustomRange rtl={false} />
+          <CustomRange onPriceRange={onPriceRange} rtl={false} />
         </div>
 
         <div id="style" className="flex flex-col gap-4">
@@ -183,6 +236,7 @@ const LeftBarFilters : React.FC<LeftBarFiltersProps> = ({ setCloseFilter }) => {
                   label={style.name}
                   size={"xsmall"}
                   buttonType="text"
+                  onClick={() => filterHandler("style", style.name)}
                 />
               </div>
             ))}
