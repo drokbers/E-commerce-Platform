@@ -1,3 +1,4 @@
+"use client";
 import { IconSearch } from "@tabler/icons-react";
 import CustomButton from "../button";
 
@@ -10,7 +11,9 @@ interface CustomFormProps {
   placeholder?: string;
   buttonLabel?: string; //void
   className?: string;
+  value?: string;
   onClick?: () => void;
+  onChange?: (e: any) => void;
 }
 
 type FormType = "input" | "textarea";
@@ -25,7 +28,9 @@ const CustomForm: React.FC<CustomFormProps> = ({
   buttonLabel,
   className,
   inputType = "text",
+  value,
   onClick,
+  onChange,
 }) => {
   const renderIcon = (position: IconSideType) =>
     (iconSide === position || iconSide === "both") && (
@@ -44,9 +49,7 @@ const CustomForm: React.FC<CustomFormProps> = ({
   return (
     <form className={`flex flex-col gap-2 text-left ${className}`}>
       {label && (
-        <label className=" text-sm font-semibold text-blue-100">
-          {label}
-        </label>
+        <label className=" text-sm font-semibold text-blue-100">{label}</label>
       )}
 
       <div className="relative flex gap-2">
@@ -58,7 +61,10 @@ const CustomForm: React.FC<CustomFormProps> = ({
           className={inputClassNames}
           placeholder={placeholder || "Search"}
           aria-label={label || "Search"}
-        
+          onChange={(e) => {
+            onChange && onChange(e);
+          }}
+          value={value}
         />
 
         {renderIcon("right")}

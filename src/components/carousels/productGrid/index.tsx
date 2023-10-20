@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import CustomButton from "../../layout/button";
-import ProductItem from "../productCarousel/productItem";
 import ProductData from "@/product.json";
+import ProductGridItem from "./productGridItem";
 
 const productGrid = () => {
   const [loadedProducts, setLoadedProducts] = useState<number>(8);
@@ -38,22 +38,8 @@ const productGrid = () => {
           iconType="ChevronDown"
         />
       </div>
-      <div className="flex flex-col w-full  gap-4 md:gap-8  ">
-        <div className="grid grid-cols-2 justify-center  xl:grid-cols-4 gap-8">
-          {ProductData.slice(0, loadedProducts).map((item) => (
-            <ProductItem
-              key={item.id}
-              id={item.id}
-              photo={item.photos ? item.photos[0] : "/defaultImagePath"}
-              title={item.title}
-              price={item.price}
-              discount={item.discount}
-              new={item.new}
-              type={"productGrid"}
-            />
-          ))}
-        </div>
-      </div>
+
+      <ProductGridItem products={ProductData.slice(0, loadedProducts)} />
       <CustomButton
         label={"Load more"}
         size={"medium"}

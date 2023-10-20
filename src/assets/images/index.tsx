@@ -6,7 +6,7 @@ import categoryBags from "./categoryBags.png";
 import categoryAccessories from "./categoryAccessories.png";
 import brandLogo from "./brandlogo.svg";
 import shopBannerBG from "./shopBannerBG.png";
-import placeHolder from "./placeHolder.jpg";
+import placeHolder from "./placeholder.png";
 import Gpay from "./GPay.svg";
 import paypal from "./paypal.svg";
 import Afterpay from "./Afterpay.svg";

@@ -28,7 +28,7 @@ const Shop = () => {
     setShortBy(shortBy);
   };
 
-  const filteredProducts = useFilters(selectedFilters, shortBy);
+  const filteredProducts = useFilters({ selectedFilters, sortBy: shortBy });
 
   const transformedProducts = filteredProducts.map((product) => ({
     id: product.id,
@@ -38,20 +38,22 @@ const Shop = () => {
     new: product.new,
     description: product.description,
     rating: product.rating,
-    photo: product.photos ? product.photos[0] : "/defaultImagePath",
+    photo: product.photos
+      ? product.photos[0]
+      : "https://i.imgur.com/TIhrbBm.png",
   }));
-  const isLeftBarOpen = () => gridCount === 5  && isLeftFilterVisible || isLeftFilterVisible;
+  const isLeftBarOpen = () =>
+    (gridCount === 5 && isLeftFilterVisible) || isLeftFilterVisible;
 
-  console.log(isLeftFilterVisible)
   return (
-    <div className="flex  pr-4 pl-4 md:pr-12 md:pl-12 ">
+    <div className="flex pr-4 pl-4 md:pr-12 md:pl-12 ">
       {isLeftBarOpen() && (
         <LeftBarFilters
           setCloseFilter={setLeftFilterVisible}
           onFiltersUpdate={onFiltersUpdate}
         />
       )}
-      <div className="flex  flex-col w-full">
+      <div className="flex flex-col w-full">
         <TopBarFilter
           leftFilterStatus={isLeftFilterVisible}
           setLeftBar={setLeftFilterVisible}

@@ -1,11 +1,10 @@
 "use client";
 import { IconEye } from "@tabler/icons-react";
+import { toast } from "react-toastify";
 
 import { useState } from "react";
-
 import { CartItem } from "@/types/model";
 import useCart from "@/hooks/useCart";
-
 import CustomButton from "@/components/layout/button";
 import BreadCrumbs from "@/components/layout/breadCrumbs";
 import GetStars from "@/utils/getStars";
@@ -13,6 +12,8 @@ import WishlistComponent from "@/components/layout/wishlist";
 import ProductData from "@/product.json";
 import { useDispatch } from "react-redux";
 import { toggleCartFlyOut } from "@/redux/features/cartSlice";
+
+
 
 interface ProductInfoProps {
   id: string;
@@ -57,7 +58,7 @@ const productInformation = ({ id }: ProductInfoProps) => {
     if (!product) return;
 
     if (!selectedColor || !selectedSize) {
-      alert("Please select a color and size");
+      toast.warning("Please select a color and size");
       return;
     }
 
@@ -72,7 +73,9 @@ const productInformation = ({ id }: ProductInfoProps) => {
     };
 
     if (isProductInCart(product.id, selectedColor, selectedSize)) {
-      alert("This item with the selected attributes is already in the cart.");
+      toast.warning(
+        "This item with the selected attributes is already in the cart."
+      );
       return;
     }
 

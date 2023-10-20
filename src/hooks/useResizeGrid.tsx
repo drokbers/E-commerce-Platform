@@ -10,9 +10,9 @@ const useResizeGrid = (initialCount: number) => {
       if (window.innerWidth >= 1400) {
         setGridCount(initialCount);
       } else if (window.innerWidth >= 992) {
-        setGridCount(initialCount-1);
+        setGridCount(initialCount - 1);
       } else if (window.innerWidth >= 768) {
-        setGridCount(initialCount-2);
+        setGridCount(initialCount - 2);
       } else if (window.innerWidth >= 356) {
         setGridCount(1);
       } else {

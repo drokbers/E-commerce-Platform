@@ -6,6 +6,9 @@ import ProductContent from "@/components/product/content";
 import ProductCarousel from "@/components/carousels/productCarousel";
 import { CartState } from "@/types/model";
 import { useSelector } from "react-redux";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const { isFlyoutOpen } = useSelector(
@@ -20,6 +23,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <Header />
       <ProductCard id={params.id} />
       <ProductContent id={params.id} />
+      <ToastContainer />
       <ProductCarousel title="You might also like" />
       <Footer />
     </div>

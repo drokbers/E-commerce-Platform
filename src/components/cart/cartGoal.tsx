@@ -10,7 +10,7 @@ const CartGoal = () => {
 
   const RANGES = {
     FREE_SHIPPING: 200,
-    THREE_QUARTER: 150,
+    THREE_QUARTER: 199,
     HALF: 100,
     QUARTER: 50,
     MINIMUM: 10,
