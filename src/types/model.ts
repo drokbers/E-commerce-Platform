@@ -65,6 +65,9 @@ export interface CartState {
   isFlyoutOpen: boolean;
   shipping: number;
 }
+export interface ShopState {
+  filters: Filters;
+}
 
 export interface Filters {
   category: string[],
