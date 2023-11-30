@@ -10,7 +10,7 @@ const Slider = () => {
         <Image
           fill
           style={{ objectFit: "cover" }}
-          src="https://s3-alpha-sig.figma.com/img/db99/395e/0ed48dd66376f5aa96ffa5561fd66cc3?Expires=1694390400&Signature=J1dZ0dvD59PPDJTCHC0-nkOSnXI8NMMuc4hfI1KzLxZBC1FEKEsm9G9tOl5KcKSn-OSPcr65oliWoFQrtp5B7fQf~viO~W2nrY27YvSDUfyrx1LF0AGnBHfUbOFqA-T1b-yEJvzQoj5~KSrFsW-CCvmMgccvA5nFLma8Txz1wU7E1X9g6SUNVNkPJSYsFjAthMhD9oQHFlxFHxd-Twby6GnVDnwtX1kgFlayc~M0SDzDnjpVIAVlbwkOB78cDOn5dVL4AgFzUIcJAs1maSYjH8ghCXtw1HIM21vJnFCzowkmzLc0XjvFR6Sv6BNULNohiSgwJ1YXNLTvTK05d8KIUQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          src="https://i.imgur.com/wtcuawk.png"
           alt="SliderModel"
         />
       </div>

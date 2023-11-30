@@ -3,7 +3,9 @@ import { IconX } from "@tabler/icons-react";
 import CustomButton from "@/components/layout/button";
 import CustomRange from "./customRange";
 import { useEffect, useState } from "react";
-import { Filters } from "@/types/model";
+import { Filters, ShopState } from "@/types/model";
+import { useDispatch, useSelector } from "react-redux";
+import { updateFilters } from "@/redux/features/shopSlice";
 
 const DummyCategory = [
   {
@@ -109,42 +111,43 @@ const LeftBarFilters: React.FC<LeftBarFiltersProps> = ({
   setCloseFilter,
   onFiltersUpdate,
 }) => {
-  const [selectedFilters, setSelectedFilters] = useState<Filters>({
-    category: [],
-    color: [],
-    size: [],
-    style: [],
-    price: [],
-  });
+  // const [selectedFilters, setSelectedFilters] = useState<Filters>({
+  //   category: [],
+  //   color: [],
+  //   size: [],
+  //   style: [],
+  //   price: [],
+  // });
+
+  const dispatch = useDispatch();
+
+  const { filters } = useSelector((state: { shop: ShopState }) => state.shop);
 
   const onPriceRange = (values: number[]) => {
-    setSelectedFilters((prevFilters) => ({
-      ...prevFilters,
-      price: values,
-    }));
+    dispatch(updateFilters({ ...filters, price: values }));
   };
 
   const filterHandler = (type: keyof Filters, value: string | number[]) => {
-    setSelectedFilters((prev) => {
-      if (type === "price" && Array.isArray(value)) {
-        return { ...prev, price: value as number[] };
+    let updatedFilters = { ...filters };
+  
+    if (type === "price" && Array.isArray(value)) {
+      updatedFilters.price = value as number[];
+    } else if (typeof value === "string") {
+      const currentValues = [...updatedFilters[type] as string[]]; // Burada bir kopya oluşturuyoruz
+      const valueIndex = currentValues.indexOf(value);
+  
+      if (valueIndex > -1) {
+        currentValues.splice(valueIndex, 1);
+      } else {
+        currentValues.push(value);
       }
-      if (typeof value === "string" && type !== "price") {
-        const currentFilterValues = prev[type] as string[];
-        const isValueSelected = currentFilterValues.includes(value);
-        const updatedValues = isValueSelected
-          ? currentFilterValues.filter((v) => v !== value)
-          : [...currentFilterValues, value];
-        return { ...prev, [type]: updatedValues };
-      }
-
-      return prev;
-    });
+      
+      updatedFilters = { ...updatedFilters, [type]: currentValues }; // Güncellenmiş değerleri kullanarak yeni bir obje oluşturuyoruz
+    }
+  
+    dispatch(updateFilters(updatedFilters));
   };
-
-  useEffect(() => {
-    onFiltersUpdate(selectedFilters);
-  }, [selectedFilters, onFiltersUpdate]);
+  
 
   return (
     <div className="hidden md:flex flex-col   p-6 gap-8">
@@ -167,7 +170,7 @@ const LeftBarFilters: React.FC<LeftBarFiltersProps> = ({
                     buttonType={"text"}
                     size={"small"}
                     className={` ${
-                      selectedFilters.category.includes(category.name)
+                      filters.category.includes(category.name)
                         ? "underline font-semibold"
                         : "no-underline font-normal"
                     }`}
@@ -188,7 +191,7 @@ const LeftBarFilters: React.FC<LeftBarFiltersProps> = ({
                 size={"xsmall"}
                 buttonType="circle"
                 className={` ${
-                  selectedFilters.color.includes(color.name)
+                  filters.color.includes(color.name)
                     ? "ring-black-500 ring-offset-2 ring-1"
                     : "rings-offset-0 ring-0"
                 }    ${iconColors(color.name)}`}
@@ -212,7 +215,7 @@ const LeftBarFilters: React.FC<LeftBarFiltersProps> = ({
                 border
                 onClick={() => filterHandler("size", size.name)}
                 className={` ${
-                  selectedFilters.size.includes(size.name)
+                  filters.size.includes(size.name)
                     ? "border-black-900"
                     : "border-black-300"
                 } `}
